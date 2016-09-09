@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoVc3ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mid-oO-D4t">
+                    <rect key="frame" x="116" y="80" width="88" height="34"/>
+                    <color key="backgroundColor" red="0.80664405593116162" green="1" blue="0.56545720926365872" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="P15-Fc-6yK"/>
+                        <constraint firstAttribute="width" constant="88" id="gtN-1B-a8b"/>
+                    </constraints>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="saveImage:" destination="-1" eventType="touchUpInside" id="wzx-D5-0gE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrl-fK-Zo1">
+                    <rect key="frame" x="224" y="80" width="88" height="34"/>
+                    <color key="backgroundColor" red="1" green="0.65878657944683705" blue="0.65103576885162417" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="撤销"/>
+                    <connections>
+                        <action selector="backView:" destination="-1" eventType="touchUpInside" id="ox0-l2-u6F"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8r-p0-UYJ">
+                    <rect key="frame" x="14" y="80" width="80" height="34"/>
+                    <color key="backgroundColor" red="1" green="0.70827430287927673" blue="0.608030957598369" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="vl3-2v-39G"/>
+                    </constraints>
+                    <state key="normal" title="清除"/>
+                    <connections>
+                        <action selector="clearView:" destination="-1" eventType="touchUpInside" id="0Vc-aW-GsK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.80262349754889373" green="0.67580247329831478" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Rrl-fK-Zo1" firstAttribute="width" secondItem="mid-oO-D4t" secondAttribute="width" id="4qh-ox-5aE"/>
+                <constraint firstItem="mid-oO-D4t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="59K-ba-zhn"/>
+                <constraint firstItem="Rrl-fK-Zo1" firstAttribute="bottom" secondItem="mid-oO-D4t" secondAttribute="bottom" id="HQq-dA-Gor"/>
+                <constraint firstItem="v8r-p0-UYJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="KBt-sk-3Uv"/>
+                <constraint firstItem="mid-oO-D4t" firstAttribute="top" secondItem="v8r-p0-UYJ" secondAttribute="top" id="RuN-2H-mcl"/>
+                <constraint firstItem="mid-oO-D4t" firstAttribute="bottom" secondItem="v8r-p0-UYJ" secondAttribute="bottom" id="V6I-Ir-qae"/>
+                <constraint firstItem="Rrl-fK-Zo1" firstAttribute="leading" secondItem="mid-oO-D4t" secondAttribute="trailing" constant="20" id="hHM-N3-NvD"/>
+                <constraint firstItem="mid-oO-D4t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="mUQ-lw-Skk"/>
+                <constraint firstItem="Rrl-fK-Zo1" firstAttribute="top" secondItem="mid-oO-D4t" secondAttribute="top" id="tah-Nt-Ykc"/>
+            </constraints>
+            <point key="canvasLocation" x="356" y="234"/>
+        </view>
+    </objects>
+</document>
