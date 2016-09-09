@@ -83,9 +83,9 @@
             /***/
 //            cell.speed = 0.5;
             /**粒子运动速度*/
-            cell.velocity = 100;
+            cell.velocity = 300;
             /**速度范围 保证每个粒子有一个随机的速度值*/
-            cell.velocityRange = 30;
+            cell.velocityRange = 5;
             /**生命周期 即存活时间*/
             cell.lifetime = 0.8;
             /**生命周期增减的范围 比如lifetime = 10s, lifetimeRange = 5s那么实际的每个cell的lifetime = [5s - 15s]。*/
@@ -93,7 +93,7 @@
             /**自旋转速度*/
             cell.spin = 1;
             /**自旋转角度范围*/
-//            cell.spinRange = M_PI_2;
+            cell.spinRange = M_PI_2;
             /**初始时的缩放比例*/
             cell.scale = 0.5;
             /**缩放速度*/
@@ -110,9 +110,9 @@
             /**x y平面的发射方向 指定cell从什么方向抛洒*/
             cell.emissionLongitude = 0;
             /**周围发射角度 指定抛洒对象能在多大的角度范围扩散*/
-            cell.emissionRange = 1;
+            cell.emissionRange =  M_PI_2/6;
             /**y方向的加速度*/
-            cell.yAcceleration = 10;
+            cell.yAcceleration = 0.5;
             /**x方向的加速度*/
 //            cell.xAcceleration = 0;
             UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"good%d_30x30" , i]];

@@ -42,6 +42,8 @@
 		94289EB61D82C35D00A3258D /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94289EA41D82C35D00A3258D /* ShareSDKConnector.framework */; };
 		94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289EA81D82C35D00A3258D /* DemoVC1.m */; };
 		94289EB91D82C42700A3258D /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94289EB81D82C42700A3258D /* Address.plist */; };
+		94289EBC1D82F83F00A3258D /* 城市选择.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94289EBB1D82F83F00A3258D /* 城市选择.gif */; };
+		94289EBE1D82F85700A3258D /* 粒子动画.gif in Resources */ = {isa = PBXBuildFile; fileRef = 94289EBD1D82F85700A3258D /* 粒子动画.gif */; };
 		947A66CC1D7175AB008D09A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A66CB1D7175AB008D09A5 /* main.m */; };
 		947A66CF1D7175AB008D09A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A66CE1D7175AB008D09A5 /* AppDelegate.m */; };
 		947A66D21D7175AB008D09A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A66D11D7175AB008D09A5 /* ViewController.m */; };
@@ -154,6 +156,8 @@
 		94289EA71D82C35D00A3258D /* DemoVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC1.h; sourceTree = "<group>"; };
 		94289EA81D82C35D00A3258D /* DemoVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC1.m; sourceTree = "<group>"; };
 		94289EB81D82C42700A3258D /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
+		94289EBB1D82F83F00A3258D /* 城市选择.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "城市选择.gif"; sourceTree = "<group>"; };
+		94289EBD1D82F85700A3258D /* 粒子动画.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "粒子动画.gif"; sourceTree = "<group>"; };
 		947A66C71D7175AB008D09A5 /* WYProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		947A66CB1D7175AB008D09A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		947A66CD1D7175AB008D09A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -518,9 +522,20 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		94289EBA1D82F83F00A3258D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				94289EBD1D82F85700A3258D /* 粒子动画.gif */,
+				94289EBB1D82F83F00A3258D /* 城市选择.gif */,
+			);
+			name = Image;
+			path = ../wyproject/Image;
+			sourceTree = "<group>";
+		};
 		947A66BE1D7175AB008D09A5 = {
 			isa = PBXGroup;
 			children = (
+				94289EBA1D82F83F00A3258D /* Image */,
 				940B71721D7559220087E70A /* Framework */,
 				947A66C91D7175AB008D09A5 /* WYProject */,
 				947A66E31D7175AB008D09A5 /* WYProjectTests */,
@@ -794,8 +809,10 @@
 				94289E281D82C15600A3258D /* DemoVc4.xib in Resources */,
 				94289EB31D82C35D00A3258D /* README.txt in Resources */,
 				947A66DA1D7175AB008D09A5 /* LaunchScreen.storyboard in Resources */,
+				94289EBC1D82F83F00A3258D /* 城市选择.gif in Resources */,
 				94289EB51D82C35D00A3258D /* ShareSDK.bundle in Resources */,
 				94289EAB1D82C35D00A3258D /* ShareSDKUI.bundle in Resources */,
+				94289EBE1D82F85700A3258D /* 粒子动画.gif in Resources */,
 				94289EB21D82C35D00A3258D /* read_me.txt in Resources */,
 				947A66D71D7175AB008D09A5 /* Assets.xcassets in Resources */,
 				94289EB91D82C42700A3258D /* Address.plist in Resources */,
