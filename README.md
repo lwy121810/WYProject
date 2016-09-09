@@ -6,3 +6,4 @@
 ####效果图
 ![image](https://github.com/lwy121810/wyproject/blob/master/Image/城市选择.gif)
 ##Demo5 城市选择器 实现1列/2列/3列数据切换展示
+![image](https://github.com/lwy121810/wyproject/blob/master/Image/粒子动画.gif)
