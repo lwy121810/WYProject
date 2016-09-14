@@ -18,7 +18,10 @@
  *  @param to       到达的位置
  *  @param duration 时间
  */
-+ (void)showSomeView:(UIView *)view fromPoint:(CGPoint)from toPoint:(CGPoint)to duration:(CFTimeInterval)duration;
++ (void)showSomeView:(UIView *)view
+           fromPoint:(CGPoint)from
+             toPoint:(CGPoint)to
+            duration:(CFTimeInterval)duration;
 
 /**
  *  收回菜单
@@ -28,5 +31,12 @@
  *  @param to       到某个位置
  *  @param duration 时间
  */
-+ (void)takeBackSomeView:(UIView *)view fromPoint:(CGPoint)from toOriginPoint:(CGPoint)to duration:(CFTimeInterval)duration;
++ (void)takeBackSomeView:(UIView *)view
+               fromPoint:(CGPoint)from
+           toOriginPoint:(CGPoint)to
+                duration:(CFTimeInterval)duration;
+
+/**加载动画 范围0-1 可用于显示下载进度*/
++ (void)showProgress:(CGFloat)toValue animationFrame:(CGRect)frame superView:(UIView *)superView
+;
 @end

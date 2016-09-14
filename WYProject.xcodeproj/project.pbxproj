@@ -16,6 +16,8 @@
 		940B718B1D755C030087E70A /* WYTool_RegularExpressions.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71831D755C030087E70A /* WYTool_RegularExpressions.m */; };
 		940B718C1D755C030087E70A /* WYTool_Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71851D755C030087E70A /* WYTool_Animation.m */; };
 		940B718D1D755C030087E70A /* WYHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71871D755C030087E70A /* WYHUD.m */; };
+		9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */ = {isa = PBXBuildFile; fileRef = 9425A3951D88EB13009C8ED2 /* Demo6.m */; };
+		9425A3981D88EB13009C8ED2 /* Demo6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9425A3961D88EB13009C8ED2 /* Demo6.xib */; };
 		94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289E1D1D82BF5000A3258D /* UIButton+WYCategory.m */; };
 		94289E221D82C04E00A3258D /* WYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289E211D82C04E00A3258D /* WYTextField.m */; };
 		94289E271D82C15600A3258D /* DemoVc4.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289E251D82C15600A3258D /* DemoVc4.m */; };
@@ -109,6 +111,9 @@
 		940B71861D755C030087E70A /* WYHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHUD.h; sourceTree = "<group>"; };
 		940B71871D755C030087E70A /* WYHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHUD.m; sourceTree = "<group>"; };
 		940B71951D7565370087E70A /* WYToolHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYToolHeader.h; sourceTree = "<group>"; };
+		9425A3941D88EB13009C8ED2 /* Demo6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo6.h; sourceTree = "<group>"; };
+		9425A3951D88EB13009C8ED2 /* Demo6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo6.m; sourceTree = "<group>"; };
+		9425A3961D88EB13009C8ED2 /* Demo6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo6.xib; sourceTree = "<group>"; };
 		94289E1C1D82BF5000A3258D /* UIButton+WYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WYCategory.h"; sourceTree = "<group>"; };
 		94289E1D1D82BF5000A3258D /* UIButton+WYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WYCategory.m"; sourceTree = "<group>"; };
 		94289E201D82C04E00A3258D /* WYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTextField.h; sourceTree = "<group>"; };
@@ -332,6 +337,32 @@
 				940B71951D7565370087E70A /* WYToolHeader.h */,
 			);
 			path = WYTool;
+			sourceTree = "<group>";
+		};
+		9425A3911D88EAAF009C8ED2 /* Demo6 */ = {
+			isa = PBXGroup;
+			children = (
+				9425A3921D88EAAF009C8ED2 /* VC */,
+				9425A3931D88EAAF009C8ED2 /* View */,
+			);
+			path = Demo6;
+			sourceTree = "<group>";
+		};
+		9425A3921D88EAAF009C8ED2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9425A3941D88EB13009C8ED2 /* Demo6.h */,
+				9425A3951D88EB13009C8ED2 /* Demo6.m */,
+				9425A3961D88EB13009C8ED2 /* Demo6.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9425A3931D88EAAF009C8ED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		94289E1F1D82BF7800A3258D /* 自定义控件 */ = {
@@ -560,6 +591,7 @@
 		947A66C91D7175AB008D09A5 /* WYProject */ = {
 			isa = PBXGroup;
 			children = (
+				9425A3911D88EAAF009C8ED2 /* Demo6 */,
 				94289E1F1D82BF7800A3258D /* 自定义控件 */,
 				940B717B1D755BB40087E70A /* WYTool */,
 				947A67341D7176AD008D09A5 /* Category */,
@@ -818,6 +850,7 @@
 				94289EBE1D82F85700A3258D /* 粒子动画.gif in Resources */,
 				94289EB21D82C35D00A3258D /* read_me.txt in Resources */,
 				947A66D71D7175AB008D09A5 /* Assets.xcassets in Resources */,
+				9425A3981D88EB13009C8ED2 /* Demo6.xib in Resources */,
 				94289EB91D82C42700A3258D /* Address.plist in Resources */,
 				94289EB01D82C35D00A3258D /* WeiboSDK.bundle in Resources */,
 				94289E381D82C22700A3258D /* WYDemoVC5.xib in Resources */,
@@ -865,6 +898,7 @@
 				948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */,
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
+				9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */,
 				94289E271D82C15600A3258D /* DemoVc4.m in Sources */,
 				940B718A1D755C030087E70A /* WYTool_ShowMessage.m in Sources */,
 				947A66CC1D7175AB008D09A5 /* main.m in Sources */,

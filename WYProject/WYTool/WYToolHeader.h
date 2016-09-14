@@ -12,5 +12,8 @@
 
 #import "WYHUD.h"
 #import "WYTool_Image.h"
-
+#import "WYTool_Animation.h"
+#import "WYTool_RegularExpressions.h"
+#import "WYTool_ShowMessage.h"
+#import "WYTool_NSString.h"
 #endif /* WYToolHeader_h */
