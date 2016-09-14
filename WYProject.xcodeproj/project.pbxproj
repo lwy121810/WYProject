@@ -18,6 +18,12 @@
 		940B718D1D755C030087E70A /* WYHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71871D755C030087E70A /* WYHUD.m */; };
 		9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */ = {isa = PBXBuildFile; fileRef = 9425A3951D88EB13009C8ED2 /* Demo6.m */; };
 		9425A3981D88EB13009C8ED2 /* Demo6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9425A3961D88EB13009C8ED2 /* Demo6.xib */; };
+		9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = 9425A39D1D893516009C8ED2 /* DemoVC7.m */; };
+		9425A3A01D893516009C8ED2 /* DemoVC7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9425A39E1D893516009C8ED2 /* DemoVC7.xib */; };
+		9425A3AA1D894B92009C8ED2 /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = 9425A3A81D894B92009C8ED2 /* DemoVC8.m */; };
+		9425A3AB1D894B92009C8ED2 /* DemoVC8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9425A3A91D894B92009C8ED2 /* DemoVC8.xib */; };
+		9425A3AD1D895114009C8ED2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9425A3AC1D895114009C8ED2 /* MapKit.framework */; };
+		9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9425A3AF1D895A12009C8ED2 /* WYAnnotation.m */; };
 		94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289E1D1D82BF5000A3258D /* UIButton+WYCategory.m */; };
 		94289E221D82C04E00A3258D /* WYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289E211D82C04E00A3258D /* WYTextField.m */; };
 		94289E271D82C15600A3258D /* DemoVc4.m in Sources */ = {isa = PBXBuildFile; fileRef = 94289E251D82C15600A3258D /* DemoVc4.m */; };
@@ -114,6 +120,15 @@
 		9425A3941D88EB13009C8ED2 /* Demo6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo6.h; sourceTree = "<group>"; };
 		9425A3951D88EB13009C8ED2 /* Demo6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo6.m; sourceTree = "<group>"; };
 		9425A3961D88EB13009C8ED2 /* Demo6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo6.xib; sourceTree = "<group>"; };
+		9425A39C1D893516009C8ED2 /* DemoVC7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7.h; sourceTree = "<group>"; };
+		9425A39D1D893516009C8ED2 /* DemoVC7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7.m; sourceTree = "<group>"; };
+		9425A39E1D893516009C8ED2 /* DemoVC7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC7.xib; sourceTree = "<group>"; };
+		9425A3A71D894B92009C8ED2 /* DemoVC8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8.h; sourceTree = "<group>"; };
+		9425A3A81D894B92009C8ED2 /* DemoVC8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8.m; sourceTree = "<group>"; };
+		9425A3A91D894B92009C8ED2 /* DemoVC8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC8.xib; sourceTree = "<group>"; };
+		9425A3AC1D895114009C8ED2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9425A3AE1D895A12009C8ED2 /* WYAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAnnotation.h; sourceTree = "<group>"; };
+		9425A3AF1D895A12009C8ED2 /* WYAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAnnotation.m; sourceTree = "<group>"; };
 		94289E1C1D82BF5000A3258D /* UIButton+WYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WYCategory.h"; sourceTree = "<group>"; };
 		94289E1D1D82BF5000A3258D /* UIButton+WYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WYCategory.m"; sourceTree = "<group>"; };
 		94289E201D82C04E00A3258D /* WYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTextField.h; sourceTree = "<group>"; };
@@ -238,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9425A3AD1D895114009C8ED2 /* MapKit.framework in Frameworks */,
 				94ED6FE21D741EFD00E6B462 /* libiconv.tbd in Frameworks */,
 				94289EAC1D82C35D00A3258D /* ShareSDKUI.framework in Frameworks */,
 				947A67451D7177AF008D09A5 /* libsqlite3.tbd in Frameworks */,
@@ -359,6 +375,83 @@
 			sourceTree = "<group>";
 		};
 		9425A3931D88EAAF009C8ED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9425A3991D8934F6009C8ED2 /* Demo7 */ = {
+			isa = PBXGroup;
+			children = (
+				9425A39A1D8934F6009C8ED2 /* VC */,
+				9425A39B1D8934F6009C8ED2 /* View */,
+			);
+			path = Demo7;
+			sourceTree = "<group>";
+		};
+		9425A39A1D8934F6009C8ED2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9425A39C1D893516009C8ED2 /* DemoVC7.h */,
+				9425A39D1D893516009C8ED2 /* DemoVC7.m */,
+				9425A39E1D893516009C8ED2 /* DemoVC7.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9425A39B1D8934F6009C8ED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9425A3A11D894B7B009C8ED2 /* Demo8 */ = {
+			isa = PBXGroup;
+			children = (
+				9425A3A21D894B7B009C8ED2 /* VC */,
+				9425A3A31D894B7B009C8ED2 /* View */,
+			);
+			path = Demo8;
+			sourceTree = "<group>";
+		};
+		9425A3A21D894B7B009C8ED2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9425A3A71D894B92009C8ED2 /* DemoVC8.h */,
+				9425A3A81D894B92009C8ED2 /* DemoVC8.m */,
+				9425A3A91D894B92009C8ED2 /* DemoVC8.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9425A3A31D894B7B009C8ED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9425A3AE1D895A12009C8ED2 /* WYAnnotation.h */,
+				9425A3AF1D895A12009C8ED2 /* WYAnnotation.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9425A3A41D894B7B009C8ED2 /* Demo9 */ = {
+			isa = PBXGroup;
+			children = (
+				9425A3A51D894B7B009C8ED2 /* VC */,
+				9425A3A61D894B7B009C8ED2 /* View */,
+			);
+			path = Demo9;
+			sourceTree = "<group>";
+		};
+		9425A3A51D894B7B009C8ED2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9425A3A61D894B7B009C8ED2 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -569,6 +662,7 @@
 		947A66BE1D7175AB008D09A5 = {
 			isa = PBXGroup;
 			children = (
+				9425A3AC1D895114009C8ED2 /* MapKit.framework */,
 				94289EBA1D82F83F00A3258D /* Image */,
 				940B71721D7559220087E70A /* Framework */,
 				947A66C91D7175AB008D09A5 /* WYProject */,
@@ -591,6 +685,9 @@
 		947A66C91D7175AB008D09A5 /* WYProject */ = {
 			isa = PBXGroup;
 			children = (
+				9425A3A11D894B7B009C8ED2 /* Demo8 */,
+				9425A3A41D894B7B009C8ED2 /* Demo9 */,
+				9425A3991D8934F6009C8ED2 /* Demo7 */,
 				9425A3911D88EAAF009C8ED2 /* Demo6 */,
 				94289E1F1D82BF7800A3258D /* 自定义控件 */,
 				940B717B1D755BB40087E70A /* WYTool */,
@@ -845,6 +942,8 @@
 				94289EB31D82C35D00A3258D /* README.txt in Resources */,
 				947A66DA1D7175AB008D09A5 /* LaunchScreen.storyboard in Resources */,
 				94289EBC1D82F83F00A3258D /* 城市选择.gif in Resources */,
+				9425A3AB1D894B92009C8ED2 /* DemoVC8.xib in Resources */,
+				9425A3A01D893516009C8ED2 /* DemoVC7.xib in Resources */,
 				94289EB51D82C35D00A3258D /* ShareSDK.bundle in Resources */,
 				94289EAB1D82C35D00A3258D /* ShareSDKUI.bundle in Resources */,
 				94289EBE1D82F85700A3258D /* 粒子动画.gif in Resources */,
@@ -889,15 +988,18 @@
 				947A67371D7176BC008D09A5 /* UIView+Extension.m in Sources */,
 				940B717A1D755B7F0087E70A /* MBProgressHUD.m in Sources */,
 				940B71711D7538980087E70A /* DrawImageView.m in Sources */,
+				9425A3AA1D894B92009C8ED2 /* DemoVC8.m in Sources */,
 				940B71891D755C030087E70A /* WYTool_NSString.m in Sources */,
 				94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */,
 				94289E371D82C22700A3258D /* WYDemoVC5.m in Sources */,
 				940B718D1D755C030087E70A /* WYHUD.m in Sources */,
 				94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */,
+				9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */,
 				940B718C1D755C030087E70A /* WYTool_Animation.m in Sources */,
 				948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */,
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
+				9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */,
 				9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */,
 				94289E271D82C15600A3258D /* DemoVc4.m in Sources */,
 				940B718A1D755C030087E70A /* WYTool_ShowMessage.m in Sources */,

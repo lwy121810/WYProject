@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoVC8">
+            <connections>
+                <outlet property="mapView" destination="nra-HC-N6j" id="WXM-h4-Cmq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nra-HC-N6j">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QX-ob-4Un">
+                    <rect key="frame" x="9" y="473" width="113" height="59"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ANC-S9-plI"/>
+                        <constraint firstAttribute="width" constant="50" id="Sir-zO-nLR"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="btn_map_locate"/>
+                    <connections>
+                        <action selector="backToUserLocal:" destination="-1" eventType="touchUpInside" id="3Q3-A8-l7t"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.64529820968913998" green="0.70608041074932237" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nra-HC-N6j" secondAttribute="trailing" id="0Pw-yb-Zdf"/>
+                <constraint firstItem="nra-HC-N6j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rzz-tu-O3F"/>
+                <constraint firstItem="1QX-ob-4Un" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Z2O-Hp-55g"/>
+                <constraint firstAttribute="bottom" secondItem="1QX-ob-4Un" secondAttribute="bottom" constant="40" id="aaK-Lb-6LM"/>
+                <constraint firstAttribute="bottom" secondItem="nra-HC-N6j" secondAttribute="bottom" id="nB2-rM-9ai"/>
+                <constraint firstItem="nra-HC-N6j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qm2-0o-bED"/>
+            </constraints>
+            <point key="canvasLocation" x="248" y="133"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_map_locate" width="59" height="59"/>
+    </resources>
+</document>

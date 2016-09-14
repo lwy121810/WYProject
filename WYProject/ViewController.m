@@ -12,6 +12,8 @@
 #import "DemoVc4.h"
 #import "WYDemoVC5.h"
 #import "Demo6.h"
+#import "DemoVC7.h"
+#import "DemoVC8.h"
 @interface ViewController ()<UITableViewDataSource , UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic , strong) NSArray *dataArray;
@@ -29,7 +31,9 @@ static NSString *cellID = @"tableViewCell";
                            @{title:@"DemoVC3",content:@"绘画板--并保存image", vc:@"DemoVc3ViewController"},
                            @{title:@"DemoVc4" , content:@"粒子动画",vc:@"DemoVc4"},
                            @{title:@"DemoVC5" , content:@"城市选择器 可自由定义显示的列数 1~3列",vc:@"WYDemoVC5"},
-                           @{title:@"Demo6" , content:@"动画 扇形按钮展开 波纹动画",vc:@"Demo6"}
+                           @{title:@"Demo6" , content:@"动画 扇形按钮展开 波纹动画",vc:@"Demo6"},
+                           @{title:@"DemoVC7" , content:@"地图学习 用户定位 地理编码与反编码",vc:@"DemoVC7"},
+                           @{title:@"DemoVC8" , content:@"地图学习 用户定位 地理编码与反编码",vc:@"DemoVC8"}
                            ];
     }
     return _dataArray;
