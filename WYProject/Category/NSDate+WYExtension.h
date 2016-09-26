@@ -10,12 +10,12 @@
 
 @interface NSDate (WYExtension)
 
-@property (readonly, nonatomic) NSInteger wy_year;
-@property (readonly, nonatomic) NSInteger wy_month;
-@property (readonly, nonatomic) NSInteger wy_day;
-@property (readonly, nonatomic) NSInteger wy_weekday;
+@property (readonly, assign, nonatomic) NSInteger wy_year;
+@property (readonly, assign, nonatomic) NSInteger wy_month;
+@property (readonly, assign, nonatomic) NSInteger wy_day;
+@property (readonly, assign, nonatomic) NSInteger wy_weekday;
 
-@property (readonly, nonatomic) NSInteger numberOfDaysInMonth;
+@property (readonly, assign, nonatomic) NSInteger numberOfDaysInMonth;
 /**
  *  返回几个月之后的时间
  */
