@@ -61,4 +61,38 @@
     NSDate *date = [formatter dateFromString:dateString];
     return date;
 }
+/**
+ *  改变字符串中某些字符的字体颜色
+ *
+ *  @param allString    全部的字符串
+ *  @param textColor    全部字符串的字体颜色
+ *  @param changeString 要改变字体颜色的字符串 必须是全部字符串中的字符
+ *  @param changeColor  要改变的字体颜色
+ *
+ *  @return 返回改变后的结果
+ */
++ (NSMutableAttributedString *)changeColorAllString:(NSString *)allString
+                                          textColor:(UIColor *)textColor
+                                   needChangeString:(NSString *)changeString
+                                        changeColor:(UIColor *)changeColor
+{
+    NSRange changeRange = [allString rangeOfString:changeString];
+    NSMutableAttributedString *allStr = [[NSMutableAttributedString alloc] initWithString:allString attributes:@{NSForegroundColorAttributeName:textColor}];
+    [allStr addAttributes:@{NSForegroundColorAttributeName:changeColor} range:changeRange];
+    
+    return allStr;
+}
+
+/**删除掉字典中value为空的数据 */
++ (NSMutableDictionary *)removeNullValueWithDictionary:(NSMutableDictionary *)dict
+{
+    if (!dict) return nil;
+    for (NSString *key in [dict allKeys]) {
+        BOOL isNull = [[dict valueForKey:key] isEqual:[NSNull null]];
+        if (isNull) {
+            [dict removeObjectForKey:key];
+        }
+    }
+    return dict;
+}
 @end

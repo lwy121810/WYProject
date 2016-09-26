@@ -70,6 +70,12 @@
 		947A67431D7177A6008D09A5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A67421D7177A6008D09A5 /* ImageIO.framework */; };
 		947A67451D7177AF008D09A5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A67441D7177AF008D09A5 /* libsqlite3.tbd */; };
 		948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948E131B1D7443AD001B2B12 /* ResponderViewController.m */; };
+		94AD3B041D98D09400CE87E3 /* Demo9.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B021D98D09400CE87E3 /* Demo9.m */; };
+		94AD3B051D98D09400CE87E3 /* Demo9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94AD3B031D98D09400CE87E3 /* Demo9.xib */; };
+		94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B071D98D0A200CE87E3 /* WYProgressView.m */; };
+		94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */; };
+		94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */; };
+		94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */; };
 		94ED6FD31D741E6100E6B462 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FD21D741E6100E6B462 /* libHyphenateSDK.a */; };
 		94ED6FD61D741E9400E6B462 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FD51D741E9400E6B462 /* CoreMedia.framework */; };
 		94ED6FD81D741EA200E6B462 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FD71D741EA200E6B462 /* AudioToolbox.framework */; };
@@ -208,6 +214,17 @@
 		947A67441D7177AF008D09A5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		948E131A1D7443AD001B2B12 /* ResponderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderViewController.h; sourceTree = "<group>"; };
 		948E131B1D7443AD001B2B12 /* ResponderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderViewController.m; sourceTree = "<group>"; };
+		94AD3B011D98D09400CE87E3 /* Demo9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo9.h; sourceTree = "<group>"; };
+		94AD3B021D98D09400CE87E3 /* Demo9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo9.m; sourceTree = "<group>"; };
+		94AD3B031D98D09400CE87E3 /* Demo9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo9.xib; sourceTree = "<group>"; };
+		94AD3B061D98D0A200CE87E3 /* WYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYProgressView.h; sourceTree = "<group>"; };
+		94AD3B071D98D0A200CE87E3 /* WYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYProgressView.m; sourceTree = "<group>"; };
+		94AD3B091D98D39E00CE87E3 /* UIColor+tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+tool.h"; sourceTree = "<group>"; };
+		94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+tool.m"; sourceTree = "<group>"; };
+		94AD3B0C1D98D40300CE87E3 /* WYTool_Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTool_Date.h; sourceTree = "<group>"; };
+		94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTool_Date.m; sourceTree = "<group>"; };
+		94AD3B0F1D98D4AE00CE87E3 /* NSDate+WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYExtension.h"; sourceTree = "<group>"; };
+		94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WYExtension.m"; sourceTree = "<group>"; };
 		94ED6FB31D741E6100E6B462 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		94ED6FB41D741E6100E6B462 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		94ED6FB51D741E6100E6B462 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -351,8 +368,11 @@
 				940B71861D755C030087E70A /* WYHUD.h */,
 				940B71871D755C030087E70A /* WYHUD.m */,
 				940B71951D7565370087E70A /* WYToolHeader.h */,
+				94AD3B0C1D98D40300CE87E3 /* WYTool_Date.h */,
+				94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */,
 			);
-			path = WYTool;
+			name = WYTool;
+			path = WYProject/WYTool;
 			sourceTree = "<group>";
 		};
 		9425A3911D88EAAF009C8ED2 /* Demo6 */ = {
@@ -447,6 +467,9 @@
 		9425A3A51D894B7B009C8ED2 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				94AD3B011D98D09400CE87E3 /* Demo9.h */,
+				94AD3B021D98D09400CE87E3 /* Demo9.m */,
+				94AD3B031D98D09400CE87E3 /* Demo9.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -454,6 +477,8 @@
 		9425A3A61D894B7B009C8ED2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94AD3B061D98D0A200CE87E3 /* WYProgressView.h */,
+				94AD3B071D98D0A200CE87E3 /* WYProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -662,6 +687,8 @@
 		947A66BE1D7175AB008D09A5 = {
 			isa = PBXGroup;
 			children = (
+				947A67341D7176AD008D09A5 /* Category */,
+				940B717B1D755BB40087E70A /* WYTool */,
 				9425A3AC1D895114009C8ED2 /* MapKit.framework */,
 				94289EBA1D82F83F00A3258D /* Image */,
 				940B71721D7559220087E70A /* Framework */,
@@ -690,8 +717,6 @@
 				9425A3991D8934F6009C8ED2 /* Demo7 */,
 				9425A3911D88EAAF009C8ED2 /* Demo6 */,
 				94289E1F1D82BF7800A3258D /* 自定义控件 */,
-				940B717B1D755BB40087E70A /* WYTool */,
-				947A67341D7176AD008D09A5 /* Category */,
 				940B71731D755AE40087E70A /* lib */,
 				948E13191D744364001B2B12 /* Demo2 */,
 				94ED6F851D741E2800E6B462 /* 环信及时通讯 未做 */,
@@ -744,12 +769,17 @@
 		947A67341D7176AD008D09A5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				94AD3B091D98D39E00CE87E3 /* UIColor+tool.h */,
+				94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */,
 				94289E1C1D82BF5000A3258D /* UIButton+WYCategory.h */,
 				94289E1D1D82BF5000A3258D /* UIButton+WYCategory.m */,
 				947A67351D7176BC008D09A5 /* UIView+Extension.h */,
 				947A67361D7176BC008D09A5 /* UIView+Extension.m */,
+				94AD3B0F1D98D4AE00CE87E3 /* NSDate+WYExtension.h */,
+				94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */,
 			);
-			path = Category;
+			name = Category;
+			path = WYProject/Category;
 			sourceTree = "<group>";
 		};
 		948E13191D744364001B2B12 /* Demo2 */ = {
@@ -953,6 +983,7 @@
 				94289EB91D82C42700A3258D /* Address.plist in Resources */,
 				94289EB01D82C35D00A3258D /* WeiboSDK.bundle in Resources */,
 				94289E381D82C22700A3258D /* WYDemoVC5.xib in Resources */,
+				94AD3B051D98D09400CE87E3 /* Demo9.xib in Resources */,
 				94289EC01D83005F00A3258D /* 绘画板.gif in Resources */,
 				947A66D51D7175AB008D09A5 /* Main.storyboard in Resources */,
 				94289E2E1D82C1B100A3258D /* DemoVc3ViewController.xib in Resources */,
@@ -991,7 +1022,9 @@
 				9425A3AA1D894B92009C8ED2 /* DemoVC8.m in Sources */,
 				940B71891D755C030087E70A /* WYTool_NSString.m in Sources */,
 				94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */,
+				94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */,
 				94289E371D82C22700A3258D /* WYDemoVC5.m in Sources */,
+				94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */,
 				940B718D1D755C030087E70A /* WYHUD.m in Sources */,
 				94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */,
 				9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */,
@@ -1001,9 +1034,12 @@
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
 				9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */,
 				9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */,
+				94AD3B041D98D09400CE87E3 /* Demo9.m in Sources */,
 				94289E271D82C15600A3258D /* DemoVc4.m in Sources */,
 				940B718A1D755C030087E70A /* WYTool_ShowMessage.m in Sources */,
 				947A66CC1D7175AB008D09A5 /* main.m in Sources */,
+				94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */,
+				94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */,
 				94289E2D1D82C1B100A3258D /* DemoVc3ViewController.m in Sources */,
 				940B71691D7519DB0087E70A /* ResponderView.m in Sources */,
 			);
