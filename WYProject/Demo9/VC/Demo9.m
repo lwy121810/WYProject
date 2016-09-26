@@ -8,10 +8,12 @@
 
 #import "Demo9.h"
 #import "WYProgressView.h"
-@interface Demo9 ()
+#import "SRMonthPicker.h"
+@interface Demo9 ()<UIPickerViewDelegate>
 {
     WYProgressView *_progress;
 }
+@property (nonatomic , weak) SRMonthPicker *pickerView;
 @end
 
 @implementation Demo9
@@ -40,7 +42,21 @@
     [stop addTarget:self action:@selector(stop:) forControlEvents:UIControlEventTouchUpInside];
     [stop setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:stop];
+    
+   
+    CGRect pickerFrame = CGRectMake(0, 400, self.view.width, 150);
+    SRMonthPicker *picker = [[SRMonthPicker alloc] initWithDate:[NSDate date]];
+    picker.frame = pickerFrame;
+    picker.maximumYear = @2016;
+    picker.yearFirst = YES;
+    picker.delegate = self;
+    [self.view addSubview:picker];
+    self.pickerView = picker;
+    
+    
+    
 }
+
 - (void)start:(UIButton *)sender
 {
     [_progress start];

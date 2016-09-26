@@ -35,7 +35,7 @@ static NSString *cellID = @"tableViewCell";
                            @{title:@"Demo6" , content:@"动画 扇形按钮展开 波纹动画",vc:@"Demo6"},
                            @{title:@"DemoVC7" , content:@"地图学习 用户定位 地理编码与反编码",vc:@"DemoVC7"},
                            @{title:@"DemoVC8" , content:@"地图学习 用户定位 地理编码与反编码",vc:@"DemoVC8"},
-                           @{title:@"Demo9" , content:@"圆形进度",vc:@"Demo9"}
+                           @{title:@"Demo9" , content:@"圆形进度, 只有两列的时间选择器",vc:@"Demo9"}
                            ];
     }
     return _dataArray;

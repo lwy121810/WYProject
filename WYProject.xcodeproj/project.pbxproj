@@ -76,6 +76,7 @@
 		94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */; };
 		94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */; };
 		94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */; };
+		94AD3B591D98E40600CE87E3 /* SRMonthPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B581D98E40600CE87E3 /* SRMonthPicker.m */; };
 		94ED6FD31D741E6100E6B462 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FD21D741E6100E6B462 /* libHyphenateSDK.a */; };
 		94ED6FD61D741E9400E6B462 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FD51D741E9400E6B462 /* CoreMedia.framework */; };
 		94ED6FD81D741EA200E6B462 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FD71D741EA200E6B462 /* AudioToolbox.framework */; };
@@ -225,6 +226,8 @@
 		94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTool_Date.m; sourceTree = "<group>"; };
 		94AD3B0F1D98D4AE00CE87E3 /* NSDate+WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYExtension.h"; sourceTree = "<group>"; };
 		94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WYExtension.m"; sourceTree = "<group>"; };
+		94AD3B571D98E40600CE87E3 /* SRMonthPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMonthPicker.h; sourceTree = "<group>"; };
+		94AD3B581D98E40600CE87E3 /* SRMonthPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMonthPicker.m; sourceTree = "<group>"; };
 		94ED6FB31D741E6100E6B462 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		94ED6FB41D741E6100E6B462 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		94ED6FB51D741E6100E6B462 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -687,6 +690,7 @@
 		947A66BE1D7175AB008D09A5 = {
 			isa = PBXGroup;
 			children = (
+				94AD3B151D98E39600CE87E3 /* 第三方 */,
 				947A67341D7176AD008D09A5 /* Category */,
 				940B717B1D755BB40087E70A /* WYTool */,
 				9425A3AC1D895114009C8ED2 /* MapKit.framework */,
@@ -791,6 +795,24 @@
 				940B71681D7519DB0087E70A /* ResponderView.m */,
 			);
 			name = Demo2;
+			sourceTree = "<group>";
+		};
+		94AD3B151D98E39600CE87E3 /* 第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				94AD3B5A1D98E40A00CE87E3 /* 只有两列的时间选择器 */,
+			);
+			name = "第三方";
+			path = "WYProject/第三方";
+			sourceTree = "<group>";
+		};
+		94AD3B5A1D98E40A00CE87E3 /* 只有两列的时间选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				94AD3B571D98E40600CE87E3 /* SRMonthPicker.h */,
+				94AD3B581D98E40600CE87E3 /* SRMonthPicker.m */,
+			);
+			name = "只有两列的时间选择器";
 			sourceTree = "<group>";
 		};
 		94ED6F851D741E2800E6B462 /* 环信及时通讯 未做 */ = {
@@ -1030,6 +1052,7 @@
 				9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */,
 				940B718C1D755C030087E70A /* WYTool_Animation.m in Sources */,
 				948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */,
+				94AD3B591D98E40600CE87E3 /* SRMonthPicker.m in Sources */,
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
 				9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */,
