@@ -10,11 +10,13 @@
 
 
 @interface WYFlowLayout ()
+//保存最长列的最大Y值的数组
 @property (nonatomic , strong) NSMutableArray *maxColoumnYs;
+
 /**保存所有子控件布局属性对象的数组*/
 @property (nonatomic , strong) NSMutableArray *attrsArray;
 /** 计算每个item高度的block，必须实现 */
-@property (nonatomic, copy) WYWidthBlock widthBlock;
+@property (nonatomic, copy) WYValueBlock valueBlock;
 @end
 @implementation WYFlowLayout
 
@@ -28,6 +30,7 @@
     }
     return self;
 }
+/**属性数组*/
 - (NSMutableArray *)attrsArray
 {
     if (!_attrsArray) {
@@ -65,8 +68,6 @@
     for (int i = 0; i < self.column; i ++) {
         _maxColoumnYs[i] = @(self.edgeInset.top);
     }
-    
-    
     //取出当前collectionView的所有子控件的个数
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     
@@ -122,7 +123,15 @@
     //3.每个子控件的宽
     CGFloat width = totalWidth / self.column;
     //高度
-    CGFloat height = 35;
+//    CGFloat height = arc4random_uniform(100) + 80;
+    CGFloat height;
+    //    CGFloat width;
+    if (self.valueBlock) {
+        height = self.valueBlock(indexPath, width);
+    }else{//没有实现返回高度方法 设置默认高度
+//        NSAssert(height != 0,@"Please implement computeIndexCellHeightWithWidthBlock Method");
+        height = arc4random_uniform(100) + 80;
+    }
     
     //找出最短列的列号 以及最短列最大的Y值
     //取出第0列的Y值 假设第0列最小
@@ -175,10 +184,10 @@
  *
  *  @param block 计算item高度的block
  */
-- (void)computeIndexCellHeightWithWidthBlock:(WYWidthBlock)widthBlock
+- (void)computeIndexCellHeight:(WYValueBlock)valueBlock
 {
-    if (self.widthBlock != widthBlock) {
-        self.widthBlock = widthBlock;
+    if (self.valueBlock != valueBlock) {
+        self.valueBlock = valueBlock;
     }
 }
 @end

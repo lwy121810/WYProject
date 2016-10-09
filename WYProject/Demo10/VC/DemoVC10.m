@@ -37,6 +37,14 @@ static NSString *ID = @"UICollectionViewCell";
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor lightGrayColor];
+    
+    /**可以不实现该方法 会默认是一个80 - 180的随机数*/
+    [self.layout computeIndexCellHeight:nil];
+
+    //实现该方法的话 要返回item的高度
+//    [self.layout computeIndexCellHeight:^CGFloat(NSIndexPath *indexPath, CGFloat value) {
+//        return arc4random_uniform(200) + 80;
+//    }];
 }
 
 #pragma mark - UICollectionViewDataSource

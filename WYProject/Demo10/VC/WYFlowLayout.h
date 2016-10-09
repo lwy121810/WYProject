@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef CGFloat(^WYWidthBlock)(NSIndexPath *indexPath , CGFloat height);
+typedef CGFloat(^WYValueBlock)(NSIndexPath *indexPath , CGFloat itemWidth);
 @interface WYFlowLayout : UICollectionViewFlowLayout
 
 /**显示多少列 默认是3列*/
@@ -20,9 +20,9 @@ typedef CGFloat(^WYWidthBlock)(NSIndexPath *indexPath , CGFloat height);
 /**列间距 默认10*/
 @property (nonatomic, assign) CGFloat columnMargin;
 /**
- *  对象方法
+ *  对象方法 该方法返回的是每个item的高度 不实现的话高度为默认值 随机数（arc4random_uniform(100) + 80）
  *
- *  @param block 在block中最后要返回一个item的高度
+ *  @param block 在block中最后要返回一个item的高度 block的参数是cell的indexPath 和宽度
  */
-- (void)computeIndexCellHeightWithWidthBlock:(WYWidthBlock)widthBlock;
+- (void)computeIndexCellHeight:(WYValueBlock)valueBlock;
 @end
