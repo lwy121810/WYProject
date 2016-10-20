@@ -14,6 +14,11 @@
 		940260FB1DB8CAD400BF032D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 940260F91DB8CAD400BF032D /* 2.jpg */; };
 		940261041DB8CD5A00BF032D /* DemoVC13.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261031DB8CD5A00BF032D /* DemoVC13.m */; };
 		940261071DB8CDC700BF032D /* WYScaleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261061DB8CDC700BF032D /* WYScaleLabelView.m */; };
+		9402610C1DB8CFBA00BF032D /* MXNavigationBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9402610B1DB8CFBA00BF032D /* MXNavigationBarManager.m */; };
+		940261151DB8CFF600BF032D /* GradientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9402610E1DB8CFF600BF032D /* GradientTableViewController.m */; };
+		940261161DB8CFF600BF032D /* MutationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261101DB8CFF600BF032D /* MutationTableViewController.m */; };
+		940261171DB8CFF600BF032D /* ReversalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261121DB8CFF600BF032D /* ReversalTableViewController.m */; };
+		940261181DB8CFF600BF032D /* TranslateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261141DB8CFF600BF032D /* TranslateTableViewController.m */; };
 		940B71691D7519DB0087E70A /* ResponderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71681D7519DB0087E70A /* ResponderView.m */; };
 		940B71711D7538980087E70A /* DrawImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71701D7538980087E70A /* DrawImageView.m */; };
 		940B717A1D755B7F0087E70A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71791D755B7F0087E70A /* MBProgressHUD.m */; };
@@ -136,6 +141,16 @@
 		940261031DB8CD5A00BF032D /* DemoVC13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC13.m; sourceTree = "<group>"; };
 		940261051DB8CDC700BF032D /* WYScaleLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYScaleLabelView.h; sourceTree = "<group>"; };
 		940261061DB8CDC700BF032D /* WYScaleLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYScaleLabelView.m; sourceTree = "<group>"; };
+		9402610A1DB8CFBA00BF032D /* MXNavigationBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNavigationBarManager.h; sourceTree = "<group>"; };
+		9402610B1DB8CFBA00BF032D /* MXNavigationBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXNavigationBarManager.m; sourceTree = "<group>"; };
+		9402610D1DB8CFF600BF032D /* GradientTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientTableViewController.h; sourceTree = "<group>"; };
+		9402610E1DB8CFF600BF032D /* GradientTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientTableViewController.m; sourceTree = "<group>"; };
+		9402610F1DB8CFF600BF032D /* MutationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutationTableViewController.h; sourceTree = "<group>"; };
+		940261101DB8CFF600BF032D /* MutationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutationTableViewController.m; sourceTree = "<group>"; };
+		940261111DB8CFF600BF032D /* ReversalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReversalTableViewController.h; sourceTree = "<group>"; };
+		940261121DB8CFF600BF032D /* ReversalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReversalTableViewController.m; sourceTree = "<group>"; };
+		940261131DB8CFF600BF032D /* TranslateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateTableViewController.h; sourceTree = "<group>"; };
+		940261141DB8CFF600BF032D /* TranslateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateTableViewController.m; sourceTree = "<group>"; };
 		940B71671D7519DB0087E70A /* ResponderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderView.h; sourceTree = "<group>"; };
 		940B71681D7519DB0087E70A /* ResponderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderView.m; sourceTree = "<group>"; };
 		940B716F1D7538980087E70A /* DrawImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawImageView.h; sourceTree = "<group>"; };
@@ -408,6 +423,23 @@
 				940261061DB8CDC700BF032D /* WYScaleLabelView.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		940261081DB8CFB400BF032D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				940261091DB8CFBA00BF032D /* MXNavigationBarManager */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		940261091DB8CFBA00BF032D /* MXNavigationBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				9402610A1DB8CFBA00BF032D /* MXNavigationBarManager.h */,
+				9402610B1DB8CFBA00BF032D /* MXNavigationBarManager.m */,
+			);
+			path = MXNavigationBarManager;
 			sourceTree = "<group>";
 		};
 		940B71721D7559220087E70A /* Framework */ = {
@@ -1038,6 +1070,7 @@
 		94FC4E3A1DB4D1B300B8BCB5 /* Demo12 */ = {
 			isa = PBXGroup;
 			children = (
+				940261081DB8CFB400BF032D /* lib */,
 				94FC4E3B1DB4D1B300B8BCB5 /* VC */,
 				94FC4E3C1DB4D1B300B8BCB5 /* View */,
 			);
@@ -1050,6 +1083,14 @@
 				94FC4E3D1DB4D1C800B8BCB5 /* DemoVC12.h */,
 				94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */,
 				94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */,
+				9402610D1DB8CFF600BF032D /* GradientTableViewController.h */,
+				9402610E1DB8CFF600BF032D /* GradientTableViewController.m */,
+				9402610F1DB8CFF600BF032D /* MutationTableViewController.h */,
+				940261101DB8CFF600BF032D /* MutationTableViewController.m */,
+				940261111DB8CFF600BF032D /* ReversalTableViewController.h */,
+				940261121DB8CFF600BF032D /* ReversalTableViewController.m */,
+				940261131DB8CFF600BF032D /* TranslateTableViewController.h */,
+				940261141DB8CFF600BF032D /* TranslateTableViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1216,6 +1257,7 @@
 				94A4AA741DAA7BA4000B32DB /* WYFatherViewController.m in Sources */,
 				947A66D21D7175AB008D09A5 /* ViewController.m in Sources */,
 				94289E221D82C04E00A3258D /* WYTextField.m in Sources */,
+				940261171DB8CFF600BF032D /* ReversalTableViewController.m in Sources */,
 				940260F21DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m in Sources */,
 				949F1FD91D9BABF500C18C63 /* DemoVC10.m in Sources */,
 				940B71881D755C030087E70A /* WYTool_Image.m in Sources */,
@@ -1235,13 +1277,16 @@
 				948E2E071DB480A000D94196 /* WYTool_CheckAuthority.m in Sources */,
 				94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */,
 				940B718D1D755C030087E70A /* WYHUD.m in Sources */,
+				940261181DB8CFF600BF032D /* TranslateTableViewController.m in Sources */,
 				94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */,
 				9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */,
 				940B718C1D755C030087E70A /* WYTool_Animation.m in Sources */,
 				948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */,
 				940260F31DB8C9D500BF032D /* UIView+GSKTransplantSubviews.m in Sources */,
 				940260F11DB8C9D500BF032D /* GSKStretchyHeaderView.m in Sources */,
+				940261161DB8CFF600BF032D /* MutationTableViewController.m in Sources */,
 				94AD3B591D98E40600CE87E3 /* SRMonthPicker.m in Sources */,
+				940261151DB8CFF600BF032D /* GradientTableViewController.m in Sources */,
 				94FC4E381DB4CF2900B8BCB5 /* DemoVC11.m in Sources */,
 				940261071DB8CDC700BF032D /* WYScaleLabelView.m in Sources */,
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
@@ -1252,6 +1297,7 @@
 				94289E271D82C15600A3258D /* DemoVc4.m in Sources */,
 				940B718A1D755C030087E70A /* WYTool_ShowMessage.m in Sources */,
 				947A66CC1D7175AB008D09A5 /* main.m in Sources */,
+				9402610C1DB8CFBA00BF032D /* MXNavigationBarManager.m in Sources */,
 				94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */,
 				94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */,
 				940261041DB8CD5A00BF032D /* DemoVC13.m in Sources */,

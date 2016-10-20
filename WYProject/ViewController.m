@@ -41,7 +41,7 @@ static NSString *cellID = @"tableViewCell";
                            @{title:@"Demo9" , content:@"圆形进度, 只有两列的时间选择器",vc:@"Demo9"},
                            @{title:@"DemoVC10" , content:@"瀑布流",vc:@"DemoVC10"},
                            @{title:@"DemoVC11" , content:@"地图学习-- 画线",vc:@"DemoVC11"},
-                           @{title:@"DemoVC12" , content:@"导航栏渐变效果",vc:@"DemoVC12"},
+                           @{title:@"DemoVC12" , content:@"导航栏渐变效果  网上找的demo",vc:@"DemoVC12"},
                            @{title:@"DemoVC13" , content:@"使用GSK实现tableView的header的动画",vc:@"DemoVC13"}
                            ];
     }
