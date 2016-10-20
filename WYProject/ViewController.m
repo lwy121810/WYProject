@@ -16,6 +16,8 @@
 #import "DemoVC8.h"
 #import "Demo9.h"
 #import "DemoVC10.h"
+#import "DemoVC11.h"
+#import "DemoVC12.h"
 @interface ViewController ()<UITableViewDataSource , UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic , strong) NSArray *dataArray;
@@ -29,7 +31,7 @@ static NSString *cellID = @"tableViewCell";
         NSString *content = @"content";
         NSString *vc = @"vc";
         self.dataArray = @[@{title:@"DemoVC1",content:@"使用shareSDK进行第三方登录", vc:@"DemoVC1"},
-                           @{title:@"DemoVC2",content:@"", vc:@"ResponderViewController"},
+                           @{title:@"DemoVC2",content:@"响应者链学习 未完...", vc:@"ResponderViewController"},
                            @{title:@"DemoVC3",content:@"绘画板--并保存image", vc:@"DemoVc3ViewController"},
                            @{title:@"DemoVc4" , content:@"粒子动画",vc:@"DemoVc4"},
                            @{title:@"DemoVC5" , content:@"城市选择器 可自由定义显示的列数 1~3列",vc:@"WYDemoVC5"},
@@ -37,10 +39,23 @@ static NSString *cellID = @"tableViewCell";
                            @{title:@"DemoVC7" , content:@"地图学习 用户定位 地理编码与反编码",vc:@"DemoVC7"},
                            @{title:@"DemoVC8" , content:@"地图学习 用户定位 地理编码与反编码",vc:@"DemoVC8"},
                            @{title:@"Demo9" , content:@"圆形进度, 只有两列的时间选择器",vc:@"Demo9"},
-                           @{title:@"DemoVC10" , content:@"瀑布流",vc:@"DemoVC10"}
+                           @{title:@"DemoVC10" , content:@"瀑布流",vc:@"DemoVC10"},
+                           @{title:@"DemoVC11" , content:@"地图学习-- 画线",vc:@"DemoVC11"},
+                           @{title:@"DemoVC12" , content:@"导航栏渐变效果",vc:@"DemoVC12"},
+                           @{title:@"DemoVC13" , content:@"使用GSK实现tableView的header的动画",vc:@"DemoVC13"}
                            ];
     }
     return _dataArray;
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -77,12 +92,15 @@ static NSString *cellID = @"tableViewCell";
 {
     
     NSString *vcKey = @"vc";
+    NSString *title = @"title";
+
     NSDictionary *infoDict = self.dataArray[indexPath.row];
     
     NSString *vcName = infoDict[vcKey];
     
     Class targetClass = NSClassFromString(vcName);
-    id targetVc = [[targetClass alloc] init];
+    UIViewController * targetVc = [[targetClass alloc] init];
+    targetVc.title = [infoDict valueForKey:title];
     [self.navigationController pushViewController:targetVc animated:YES];
 }
 - (void)didReceiveMemoryWarning {

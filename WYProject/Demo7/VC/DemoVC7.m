@@ -57,6 +57,9 @@
 //        //定位精确度（越精确就越耗电
 //        self.locMgr.desiredAccuracy = kCLLocationAccuracyBest;
         
+#pragma mark - 开始监控 进入该区域之后会调用代理方法
+//        self.locMgr startMonitoringForRegion:<#(nonnull CLRegion *)#>
+        
         NSLog(@"开始定位");
     }else{//不能
         NSLog(@"不能定位");
@@ -118,9 +121,42 @@
     }];
     
 }
+- (void)getAreaWithlongtitude:(NSString *)longtitudeText latitudeText:(NSString *)latitudeText
+{
+    if (longtitudeText.length == 0 || latitudeText.length == 0) return;
+    //维度
+    CLLocationDegrees latitude = [latitudeText doubleValue];
+    CLLocationDegrees longtitude = [longtitudeText doubleValue];
+    
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longtitude];
+    //反向编码
+    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (error || placemarks.count == 0) {
+            self.reverseDetailAddressLabel.text = @"你输入的经纬度找不到，可能在火星上";
+        } else { // 编码成功（找到了具体的位置信息）
+            // 输出查询到的所有地标信息
+            for (CLPlacemark *placemark in placemarks) {
+                NSLog(@"name=%@ locality=%@ country=%@ postalCode=%@", placemark.name, placemark.locality, placemark.country, placemark.postalCode);
+            }
+            
+            // 显示最前面的地标信息
+            CLPlacemark *firstPlacemark = [placemarks firstObject];
+            self.reverseDetailAddressLabel.text = firstPlacemark.name;
+            
+            CLLocationDegrees latitude = firstPlacemark.location.coordinate.latitude;
+            CLLocationDegrees longitude = firstPlacemark.location.coordinate.longitude;
+            self.latitudeField.text = [NSString stringWithFormat:@"%.2f", latitude];
+            self.longtitudeField.text = [NSString stringWithFormat:@"%.2f", longitude];
+        }
+        
+    }];
+
+}
+
 /**
  *  反地理编码：经纬度 -> 地名
  */
+
 - (void)reverseGeocode
 {
     
@@ -202,6 +238,16 @@
     // 停止更新位置(不用定位服务，应当马上停止定位，非常耗电)
     [manager stopUpdatingLocation];
     NSLog(@"didUpdateLocations %lu" , (unsigned long)locations.count);
+}
+//进入该区域之后调用该方法
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+    
+}
+//离开某个区域的时候调用该方法
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

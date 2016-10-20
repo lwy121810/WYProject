@@ -27,6 +27,7 @@ static NSString *ID = @"UICollectionViewCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.layout.column = 4;
     self.collectionView.collectionViewLayout = self.layout;
     // 透明时用这个属性(保证collectionView 不会被遮挡, 也不会向下移)
     //    self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -40,11 +41,26 @@ static NSString *ID = @"UICollectionViewCell";
     
     /**可以不实现该方法 会默认是一个80 - 180的随机数*/
     [self.layout computeIndexCellHeight:nil];
-
-    //实现该方法的话 要返回item的高度
-//    [self.layout computeIndexCellHeight:^CGFloat(NSIndexPath *indexPath, CGFloat value) {
-//        return arc4random_uniform(200) + 80;
-//    }];
+    
+    __block NSInteger column = self.layout.column;
+    __weak typeof(self)weakSelf = self;
+    [self setupRightBarButtonItemsWithTitles:@[@"减少", @"增加"] buttonActions:^(UIBarButtonItem *barButtonItem, NSInteger index) {
+        NSLog(@"%ld", (long)index);
+        if (index == 0) {
+            column--;
+            if (column < 1) {
+                column =1;
+            }
+            weakSelf.layout.column = column;
+            [weakSelf.collectionView reloadData];
+        }else if (index == 1){
+            column++;
+            weakSelf.layout.column = column;
+            [weakSelf.collectionView reloadData];
+        }
+        
+    }];
+    
 }
 
 #pragma mark - UICollectionViewDataSource

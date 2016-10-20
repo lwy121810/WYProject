@@ -118,45 +118,7 @@ typedef NS_ENUM(NSInteger , WYShareLoginType) {
 - (void)buttonAction:(WYButton *)sender
 {
     WYShareLoginType loginType = sender.tag;
-    
-    NSDictionary *loginDict = @{@(WYShareLoginTypeQQ):@(SSDKPlatformTypeQQ),
-                                @(WYShareLoginTypeQQZone):@(SSDKPlatformSubTypeQZone),
-                                @(WYShareLoginTypeWB):@(SSDKPlatformTypeSinaWeibo),
-                                @(WYShareLoginTypeWX):@(SSDKPlatformTypeWechat)
-                                };
-    
-    SSDKPlatformType formType = [loginDict[@(loginType)] integerValue];
-    //例如QQ的登录
-    [ShareSDK getUserInfo:formType
-           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
-     {
-         if (state == SSDKResponseStateSuccess)
-         {
-             [[WYHUD shareHUD] showHUDWithTitle:@"登陆成功" autoHidden:YES];
-             NSLog(@"登陆成功");
-             NSLog(@"uid=%@",user.uid);
-             NSLog(@"%@",user.credential);
-             NSLog(@"token=%@",user.credential.token);
-             NSLog(@"nickname=%@",user.nickname);
-         }
-         
-         else
-         {
-             
-             NSLog(@"登录失败 - %@",error);
-         }
-         
-     }];
-    //    switch (loginType) {
-    //        case WYShareLoginTypeQQ:
-    //        {
-    //
-    //        }
-    //            break;
-    //            
-    //        default:
-    //            break;
-    //    }
+    [self loginWithType:loginType];
 }
 
 - (void)didReceiveMemoryWarning {

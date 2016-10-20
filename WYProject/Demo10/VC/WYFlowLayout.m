@@ -125,7 +125,6 @@
     //高度
 //    CGFloat height = arc4random_uniform(100) + 80;
     CGFloat height;
-    //    CGFloat width;
     if (self.valueBlock) {
         height = self.valueBlock(indexPath, width);
     }else{//没有实现返回高度方法 设置默认高度

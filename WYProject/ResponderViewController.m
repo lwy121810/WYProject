@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor orangeColor];
 
-    ResponderView *responderView = [[ResponderView alloc] initWithFrame:CGRectMake(64, 100, 100, 100)];
+    ResponderView *responderView = [[ResponderView alloc] initWithFrame:CGRectMake(64, 100, 200, 200)];
     [self.view addSubview:responderView];
     responderView.backgroundColor  = [UIColor yellowColor];
     self.responderView = responderView;
@@ -41,18 +41,17 @@
 //    }
 
     //事件类型
-   UIEventType type = event.type;
-    //事件产生时间
-    NSTimeInterval timestamp = event.timestamp;
-    
-    UITouch *touch = nil;
-    //返回值 point代表触摸在view上的位置 如果是nil的话返回的是触摸点在UIWindow的位置
-    CGPoint point = [touch locationInView:nil];
-    //记录前一个触摸点的位置
-    CGPoint previousPoint = [touch previousLocationInView:nil];
-    NSLog(@"ResponderViewController touchesBegan");
+//   UIEventType type = event.type;
+//    //事件产生时间
+//    NSTimeInterval timestamp = event.timestamp;
+//    
+//    UITouch *touch = nil;
+//    //返回值 point代表触摸在view上的位置 如果是nil的话返回的是触摸点在UIWindow的位置
+//    CGPoint point = [touch locationInView:nil];
+//    //记录前一个触摸点的位置
+//    CGPoint previousPoint = [touch previousLocationInView:nil];
+//    NSLog(@"ResponderViewController touchesBegan");
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

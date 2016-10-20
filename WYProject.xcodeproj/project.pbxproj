@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940260F11DB8C9D500BF032D /* GSKStretchyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940260EB1DB8C9D500BF032D /* GSKStretchyHeaderView.m */; };
+		940260F21DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940260EE1DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m */; };
+		940260F31DB8C9D500BF032D /* UIView+GSKTransplantSubviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 940260F01DB8C9D500BF032D /* UIView+GSKTransplantSubviews.m */; };
+		940260FA1DB8CAD400BF032D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 940260F81DB8CAD400BF032D /* 1.jpg */; };
+		940260FB1DB8CAD400BF032D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 940260F91DB8CAD400BF032D /* 2.jpg */; };
+		940261041DB8CD5A00BF032D /* DemoVC13.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261031DB8CD5A00BF032D /* DemoVC13.m */; };
+		940261071DB8CDC700BF032D /* WYScaleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261061DB8CDC700BF032D /* WYScaleLabelView.m */; };
 		940B71691D7519DB0087E70A /* ResponderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71681D7519DB0087E70A /* ResponderView.m */; };
 		940B71711D7538980087E70A /* DrawImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71701D7538980087E70A /* DrawImageView.m */; };
 		940B717A1D755B7F0087E70A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71791D755B7F0087E70A /* MBProgressHUD.m */; };
@@ -70,9 +77,12 @@
 		947A67431D7177A6008D09A5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A67421D7177A6008D09A5 /* ImageIO.framework */; };
 		947A67451D7177AF008D09A5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A67441D7177AF008D09A5 /* libsqlite3.tbd */; };
 		948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948E131B1D7443AD001B2B12 /* ResponderViewController.m */; };
+		948E2E071DB480A000D94196 /* WYTool_CheckAuthority.m in Sources */ = {isa = PBXBuildFile; fileRef = 948E2E061DB480A000D94196 /* WYTool_CheckAuthority.m */; };
 		949F1FD51D9BA9E100C18C63 /* WYFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F1FD41D9BA9E100C18C63 /* WYFlowLayout.m */; };
 		949F1FD91D9BABF500C18C63 /* DemoVC10.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F1FD71D9BABF500C18C63 /* DemoVC10.m */; };
 		949F1FDA1D9BABF500C18C63 /* DemoVC10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949F1FD81D9BABF500C18C63 /* DemoVC10.xib */; };
+		94A4AA741DAA7BA4000B32DB /* WYFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A4AA731DAA7BA4000B32DB /* WYFatherViewController.m */; };
+		94AC49A91DAE6CA70061DBD9 /* WYAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AC49A81DAE6CA70061DBD9 /* WYAnnotationView.m */; };
 		94AD3B041D98D09400CE87E3 /* Demo9.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B021D98D09400CE87E3 /* Demo9.m */; };
 		94AD3B051D98D09400CE87E3 /* Demo9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94AD3B031D98D09400CE87E3 /* Demo9.xib */; };
 		94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B071D98D0A200CE87E3 /* WYProgressView.m */; };
@@ -88,6 +98,10 @@
 		94ED6FDE1D741EBF00E6B462 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FDD1D741EBF00E6B462 /* libc++.tbd */; };
 		94ED6FE01D741ED400E6B462 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FDF1D741ED400E6B462 /* libstdc++.6.0.9.tbd */; };
 		94ED6FE21D741EFD00E6B462 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ED6FE11D741EFD00E6B462 /* libiconv.tbd */; };
+		94FC4E381DB4CF2900B8BCB5 /* DemoVC11.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4E361DB4CF2900B8BCB5 /* DemoVC11.m */; };
+		94FC4E391DB4CF2900B8BCB5 /* DemoVC11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E371DB4CF2900B8BCB5 /* DemoVC11.xib */; };
+		94FC4E401DB4D1C800B8BCB5 /* DemoVC12.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */; };
+		94FC4E411DB4D1C800B8BCB5 /* DemoVC12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +122,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940260E91DB8C9D500BF032D /* GSKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKGeometry.h; sourceTree = "<group>"; };
+		940260EA1DB8C9D500BF032D /* GSKStretchyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKStretchyHeaderView.h; sourceTree = "<group>"; };
+		940260EB1DB8C9D500BF032D /* GSKStretchyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKStretchyHeaderView.m; sourceTree = "<group>"; };
+		940260EC1DB8C9D500BF032D /* GSKStretchyHeaderView+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GSKStretchyHeaderView+Protected.h"; sourceTree = "<group>"; };
+		940260ED1DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GSKStretchyHeaderView.h"; sourceTree = "<group>"; };
+		940260EE1DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GSKStretchyHeaderView.m"; sourceTree = "<group>"; };
+		940260EF1DB8C9D500BF032D /* UIView+GSKTransplantSubviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GSKTransplantSubviews.h"; sourceTree = "<group>"; };
+		940260F01DB8C9D500BF032D /* UIView+GSKTransplantSubviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GSKTransplantSubviews.m"; sourceTree = "<group>"; };
+		940260F81DB8CAD400BF032D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		940260F91DB8CAD400BF032D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		940261021DB8CD5A00BF032D /* DemoVC13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC13.h; sourceTree = "<group>"; };
+		940261031DB8CD5A00BF032D /* DemoVC13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC13.m; sourceTree = "<group>"; };
+		940261051DB8CDC700BF032D /* WYScaleLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYScaleLabelView.h; sourceTree = "<group>"; };
+		940261061DB8CDC700BF032D /* WYScaleLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYScaleLabelView.m; sourceTree = "<group>"; };
 		940B71671D7519DB0087E70A /* ResponderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderView.h; sourceTree = "<group>"; };
 		940B71681D7519DB0087E70A /* ResponderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderView.m; sourceTree = "<group>"; };
 		940B716F1D7538980087E70A /* DrawImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawImageView.h; sourceTree = "<group>"; };
@@ -218,11 +246,17 @@
 		947A67441D7177AF008D09A5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		948E131A1D7443AD001B2B12 /* ResponderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderViewController.h; sourceTree = "<group>"; };
 		948E131B1D7443AD001B2B12 /* ResponderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderViewController.m; sourceTree = "<group>"; };
+		948E2E051DB480A000D94196 /* WYTool_CheckAuthority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTool_CheckAuthority.h; sourceTree = "<group>"; };
+		948E2E061DB480A000D94196 /* WYTool_CheckAuthority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTool_CheckAuthority.m; sourceTree = "<group>"; };
 		949F1FD31D9BA9E100C18C63 /* WYFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFlowLayout.h; sourceTree = "<group>"; };
 		949F1FD41D9BA9E100C18C63 /* WYFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFlowLayout.m; sourceTree = "<group>"; };
 		949F1FD61D9BABF500C18C63 /* DemoVC10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC10.h; sourceTree = "<group>"; };
 		949F1FD71D9BABF500C18C63 /* DemoVC10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10.m; sourceTree = "<group>"; };
 		949F1FD81D9BABF500C18C63 /* DemoVC10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC10.xib; sourceTree = "<group>"; };
+		94A4AA721DAA7BA4000B32DB /* WYFatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFatherViewController.h; sourceTree = "<group>"; };
+		94A4AA731DAA7BA4000B32DB /* WYFatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFatherViewController.m; sourceTree = "<group>"; };
+		94AC49A71DAE6CA70061DBD9 /* WYAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAnnotationView.h; sourceTree = "<group>"; };
+		94AC49A81DAE6CA70061DBD9 /* WYAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAnnotationView.m; sourceTree = "<group>"; };
 		94AD3B011D98D09400CE87E3 /* Demo9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo9.h; sourceTree = "<group>"; };
 		94AD3B021D98D09400CE87E3 /* Demo9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo9.m; sourceTree = "<group>"; };
 		94AD3B031D98D09400CE87E3 /* Demo9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo9.xib; sourceTree = "<group>"; };
@@ -274,6 +308,12 @@
 		94ED6FDD1D741EBF00E6B462 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		94ED6FDF1D741ED400E6B462 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		94ED6FE11D741EFD00E6B462 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		94FC4E351DB4CF2900B8BCB5 /* DemoVC11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC11.h; sourceTree = "<group>"; };
+		94FC4E361DB4CF2900B8BCB5 /* DemoVC11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC11.m; sourceTree = "<group>"; };
+		94FC4E371DB4CF2900B8BCB5 /* DemoVC11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC11.xib; sourceTree = "<group>"; };
+		94FC4E3D1DB4D1C800B8BCB5 /* DemoVC12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC12.h; sourceTree = "<group>"; };
+		94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC12.m; sourceTree = "<group>"; };
+		94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC12.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +365,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940260E11DB8C92300BF032D /* Demo13 */ = {
+			isa = PBXGroup;
+			children = (
+				940260F41DB8C9F000BF032D /* view */,
+				940260E81DB8C9C300BF032D /* lib */,
+				940260E21DB8C92300BF032D /* VC */,
+			);
+			path = Demo13;
+			sourceTree = "<group>";
+		};
+		940260E21DB8C92300BF032D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				940260F81DB8CAD400BF032D /* 1.jpg */,
+				940260F91DB8CAD400BF032D /* 2.jpg */,
+				940261021DB8CD5A00BF032D /* DemoVC13.h */,
+				940261031DB8CD5A00BF032D /* DemoVC13.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		940260E81DB8C9C300BF032D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				940260E91DB8C9D500BF032D /* GSKGeometry.h */,
+				940260EA1DB8C9D500BF032D /* GSKStretchyHeaderView.h */,
+				940260EB1DB8C9D500BF032D /* GSKStretchyHeaderView.m */,
+				940260EC1DB8C9D500BF032D /* GSKStretchyHeaderView+Protected.h */,
+				940260ED1DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.h */,
+				940260EE1DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m */,
+				940260EF1DB8C9D500BF032D /* UIView+GSKTransplantSubviews.h */,
+				940260F01DB8C9D500BF032D /* UIView+GSKTransplantSubviews.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		940260F41DB8C9F000BF032D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				940261051DB8CDC700BF032D /* WYScaleLabelView.h */,
+				940261061DB8CDC700BF032D /* WYScaleLabelView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		940B71721D7559220087E70A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +451,8 @@
 		940B717B1D755BB40087E70A /* WYTool */ = {
 			isa = PBXGroup;
 			children = (
+				948E2E051DB480A000D94196 /* WYTool_CheckAuthority.h */,
+				948E2E061DB480A000D94196 /* WYTool_CheckAuthority.m */,
 				940B717C1D755C030087E70A /* WYTool_Image.h */,
 				940B717D1D755C030087E70A /* WYTool_Image.m */,
 				940B717E1D755C030087E70A /* WYTool_NSString.h */,
@@ -462,6 +549,8 @@
 			children = (
 				9425A3AE1D895A12009C8ED2 /* WYAnnotation.h */,
 				9425A3AF1D895A12009C8ED2 /* WYAnnotation.m */,
+				94AC49A71DAE6CA70061DBD9 /* WYAnnotationView.h */,
+				94AC49A81DAE6CA70061DBD9 /* WYAnnotationView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -724,6 +813,9 @@
 		947A66C91D7175AB008D09A5 /* WYProject */ = {
 			isa = PBXGroup;
 			children = (
+				940260E11DB8C92300BF032D /* Demo13 */,
+				94FC4E3A1DB4D1B300B8BCB5 /* Demo12 */,
+				94FC4E331DB4CF0600B8BCB5 /* Demo11 */,
 				949F1FCB1D9BA8DB00C18C63 /* Demo10 */,
 				9425A3A11D894B7B009C8ED2 /* Demo8 */,
 				9425A3A41D894B7B009C8ED2 /* Demo9 */,
@@ -737,6 +829,8 @@
 				947A66CE1D7175AB008D09A5 /* AppDelegate.m */,
 				947A66D01D7175AB008D09A5 /* ViewController.h */,
 				947A66D11D7175AB008D09A5 /* ViewController.m */,
+				94A4AA721DAA7BA4000B32DB /* WYFatherViewController.h */,
+				94A4AA731DAA7BA4000B32DB /* WYFatherViewController.m */,
 				94289E7F1D82C35D00A3258D /* Demo1 */,
 				94289E2F1D82C22700A3258D /* Demo5 */,
 				94289E291D82C1B100A3258D /* Demo3 */,
@@ -923,6 +1017,50 @@
 			name = SDK;
 			sourceTree = "<group>";
 		};
+		94FC4E331DB4CF0600B8BCB5 /* Demo11 */ = {
+			isa = PBXGroup;
+			children = (
+				94FC4E341DB4CF0600B8BCB5 /* VC */,
+			);
+			path = Demo11;
+			sourceTree = "<group>";
+		};
+		94FC4E341DB4CF0600B8BCB5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				94FC4E351DB4CF2900B8BCB5 /* DemoVC11.h */,
+				94FC4E361DB4CF2900B8BCB5 /* DemoVC11.m */,
+				94FC4E371DB4CF2900B8BCB5 /* DemoVC11.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		94FC4E3A1DB4D1B300B8BCB5 /* Demo12 */ = {
+			isa = PBXGroup;
+			children = (
+				94FC4E3B1DB4D1B300B8BCB5 /* VC */,
+				94FC4E3C1DB4D1B300B8BCB5 /* View */,
+			);
+			path = Demo12;
+			sourceTree = "<group>";
+		};
+		94FC4E3B1DB4D1B300B8BCB5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				94FC4E3D1DB4D1C800B8BCB5 /* DemoVC12.h */,
+				94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */,
+				94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		94FC4E3C1DB4D1B300B8BCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1029,6 +1167,7 @@
 				94289EAE1D82C35D00A3258D /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				94289E281D82C15600A3258D /* DemoVc4.xib in Resources */,
 				94289EB31D82C35D00A3258D /* README.txt in Resources */,
+				94FC4E391DB4CF2900B8BCB5 /* DemoVC11.xib in Resources */,
 				947A66DA1D7175AB008D09A5 /* LaunchScreen.storyboard in Resources */,
 				949F1FDA1D9BABF500C18C63 /* DemoVC10.xib in Resources */,
 				94289EBC1D82F83F00A3258D /* 城市选择.gif in Resources */,
@@ -1039,11 +1178,14 @@
 				94289EBE1D82F85700A3258D /* 粒子动画.gif in Resources */,
 				94289EB21D82C35D00A3258D /* read_me.txt in Resources */,
 				947A66D71D7175AB008D09A5 /* Assets.xcassets in Resources */,
+				940260FA1DB8CAD400BF032D /* 1.jpg in Resources */,
 				9425A3981D88EB13009C8ED2 /* Demo6.xib in Resources */,
 				94289EB91D82C42700A3258D /* Address.plist in Resources */,
 				94289EB01D82C35D00A3258D /* WeiboSDK.bundle in Resources */,
 				94289E381D82C22700A3258D /* WYDemoVC5.xib in Resources */,
+				94FC4E411DB4D1C800B8BCB5 /* DemoVC12.xib in Resources */,
 				94AD3B051D98D09400CE87E3 /* Demo9.xib in Resources */,
+				940260FB1DB8CAD400BF032D /* 2.jpg in Resources */,
 				94289EC01D83005F00A3258D /* 绘画板.gif in Resources */,
 				947A66D51D7175AB008D09A5 /* Main.storyboard in Resources */,
 				94289E2E1D82C1B100A3258D /* DemoVc3ViewController.xib in Resources */,
@@ -1071,13 +1213,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A4AA741DAA7BA4000B32DB /* WYFatherViewController.m in Sources */,
 				947A66D21D7175AB008D09A5 /* ViewController.m in Sources */,
 				94289E221D82C04E00A3258D /* WYTextField.m in Sources */,
+				940260F21DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m in Sources */,
 				949F1FD91D9BABF500C18C63 /* DemoVC10.m in Sources */,
 				940B71881D755C030087E70A /* WYTool_Image.m in Sources */,
 				940B718B1D755C030087E70A /* WYTool_RegularExpressions.m in Sources */,
 				947A66CF1D7175AB008D09A5 /* AppDelegate.m in Sources */,
 				947A67371D7176BC008D09A5 /* UIView+Extension.m in Sources */,
+				94FC4E401DB4D1C800B8BCB5 /* DemoVC12.m in Sources */,
 				949F1FD51D9BA9E100C18C63 /* WYFlowLayout.m in Sources */,
 				940B717A1D755B7F0087E70A /* MBProgressHUD.m in Sources */,
 				940B71711D7538980087E70A /* DrawImageView.m in Sources */,
@@ -1085,14 +1230,20 @@
 				940B71891D755C030087E70A /* WYTool_NSString.m in Sources */,
 				94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */,
 				94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */,
+				94AC49A91DAE6CA70061DBD9 /* WYAnnotationView.m in Sources */,
 				94289E371D82C22700A3258D /* WYDemoVC5.m in Sources */,
+				948E2E071DB480A000D94196 /* WYTool_CheckAuthority.m in Sources */,
 				94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */,
 				940B718D1D755C030087E70A /* WYHUD.m in Sources */,
 				94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */,
 				9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */,
 				940B718C1D755C030087E70A /* WYTool_Animation.m in Sources */,
 				948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */,
+				940260F31DB8C9D500BF032D /* UIView+GSKTransplantSubviews.m in Sources */,
+				940260F11DB8C9D500BF032D /* GSKStretchyHeaderView.m in Sources */,
 				94AD3B591D98E40600CE87E3 /* SRMonthPicker.m in Sources */,
+				94FC4E381DB4CF2900B8BCB5 /* DemoVC11.m in Sources */,
+				940261071DB8CDC700BF032D /* WYScaleLabelView.m in Sources */,
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
 				9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */,
@@ -1103,6 +1254,7 @@
 				947A66CC1D7175AB008D09A5 /* main.m in Sources */,
 				94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */,
 				94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */,
+				940261041DB8CD5A00BF032D /* DemoVC13.m in Sources */,
 				94289E2D1D82C1B100A3258D /* DemoVc3ViewController.m in Sources */,
 				940B71691D7519DB0087E70A /* ResponderView.m in Sources */,
 			);

@@ -157,9 +157,7 @@
     double tan2d = (M_PI_2 / (numberItems - 1) * 2);
     double tan2 = tan(tan2d);
     double tan3 = tan(((M_PI_2 / (numberItems - 1)) * 3));
-    double tan5 = tan(M_PI_2 / (numberItems - 1) * 4);
-    
-    double tan4444 = tan(M_PI_4);
+   
     
     double x0 = [[self getXWithTanAngle:tan0] [0] doubleValue];
     double x1 = [[self getXWithTanAngle:tan1] [0] doubleValue];

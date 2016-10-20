@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DemoVC10 : UIViewController
+#import "WYFatherViewController.h"
+@interface DemoVC10 : WYFatherViewController
 
 @end
