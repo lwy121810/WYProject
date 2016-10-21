@@ -87,6 +87,13 @@
 		947A67451D7177AF008D09A5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 947A67441D7177AF008D09A5 /* libsqlite3.tbd */; };
 		948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948E131B1D7443AD001B2B12 /* ResponderViewController.m */; };
 		948E2E071DB480A000D94196 /* WYTool_CheckAuthority.m in Sources */ = {isa = PBXBuildFile; fileRef = 948E2E061DB480A000D94196 /* WYTool_CheckAuthority.m */; };
+		9497A7001DB9C82200EFBD87 /* WYNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A6FF1DB9C82200EFBD87 /* WYNetTool.m */; };
+		9497A70F1DB9C8EE00EFBD87 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A7031DB9C8EE00EFBD87 /* AFHTTPSessionManager.m */; };
+		9497A7101DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A7061DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.m */; };
+		9497A7111DB9C8EE00EFBD87 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A7081DB9C8EE00EFBD87 /* AFSecurityPolicy.m */; };
+		9497A7121DB9C8EE00EFBD87 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A70A1DB9C8EE00EFBD87 /* AFURLRequestSerialization.m */; };
+		9497A7131DB9C8EE00EFBD87 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A70C1DB9C8EE00EFBD87 /* AFURLResponseSerialization.m */; };
+		9497A7141DB9C8EE00EFBD87 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9497A70E1DB9C8EE00EFBD87 /* AFURLSessionManager.m */; };
 		949F1FD51D9BA9E100C18C63 /* WYFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F1FD41D9BA9E100C18C63 /* WYFlowLayout.m */; };
 		949F1FD91D9BABF500C18C63 /* DemoVC10.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F1FD71D9BABF500C18C63 /* DemoVC10.m */; };
 		949F1FDA1D9BABF500C18C63 /* DemoVC10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949F1FD81D9BABF500C18C63 /* DemoVC10.xib */; };
@@ -274,6 +281,21 @@
 		948E131B1D7443AD001B2B12 /* ResponderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderViewController.m; sourceTree = "<group>"; };
 		948E2E051DB480A000D94196 /* WYTool_CheckAuthority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTool_CheckAuthority.h; sourceTree = "<group>"; };
 		948E2E061DB480A000D94196 /* WYTool_CheckAuthority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTool_CheckAuthority.m; sourceTree = "<group>"; };
+		9497A6FE1DB9C82200EFBD87 /* WYNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetTool.h; sourceTree = "<group>"; };
+		9497A6FF1DB9C82200EFBD87 /* WYNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetTool.m; sourceTree = "<group>"; };
+		9497A7021DB9C8EE00EFBD87 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		9497A7031DB9C8EE00EFBD87 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		9497A7041DB9C8EE00EFBD87 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		9497A7051DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		9497A7061DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		9497A7071DB9C8EE00EFBD87 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		9497A7081DB9C8EE00EFBD87 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		9497A7091DB9C8EE00EFBD87 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		9497A70A1DB9C8EE00EFBD87 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		9497A70B1DB9C8EE00EFBD87 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		9497A70C1DB9C8EE00EFBD87 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		9497A70D1DB9C8EE00EFBD87 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		9497A70E1DB9C8EE00EFBD87 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		949F1FD31D9BA9E100C18C63 /* WYFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFlowLayout.h; sourceTree = "<group>"; };
 		949F1FD41D9BA9E100C18C63 /* WYFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFlowLayout.m; sourceTree = "<group>"; };
 		949F1FD61D9BABF500C18C63 /* DemoVC10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC10.h; sourceTree = "<group>"; };
@@ -549,6 +571,8 @@
 				940B71951D7565370087E70A /* WYToolHeader.h */,
 				94AD3B0C1D98D40300CE87E3 /* WYTool_Date.h */,
 				94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */,
+				9497A6FE1DB9C82200EFBD87 /* WYNetTool.h */,
+				9497A6FF1DB9C82200EFBD87 /* WYNetTool.m */,
 			);
 			name = WYTool;
 			path = WYProject/WYTool;
@@ -982,6 +1006,26 @@
 			name = Demo2;
 			sourceTree = "<group>";
 		};
+		9497A7011DB9C8EE00EFBD87 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9497A7021DB9C8EE00EFBD87 /* AFHTTPSessionManager.h */,
+				9497A7031DB9C8EE00EFBD87 /* AFHTTPSessionManager.m */,
+				9497A7041DB9C8EE00EFBD87 /* AFNetworking.h */,
+				9497A7051DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.h */,
+				9497A7061DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.m */,
+				9497A7071DB9C8EE00EFBD87 /* AFSecurityPolicy.h */,
+				9497A7081DB9C8EE00EFBD87 /* AFSecurityPolicy.m */,
+				9497A7091DB9C8EE00EFBD87 /* AFURLRequestSerialization.h */,
+				9497A70A1DB9C8EE00EFBD87 /* AFURLRequestSerialization.m */,
+				9497A70B1DB9C8EE00EFBD87 /* AFURLResponseSerialization.h */,
+				9497A70C1DB9C8EE00EFBD87 /* AFURLResponseSerialization.m */,
+				9497A70D1DB9C8EE00EFBD87 /* AFURLSessionManager.h */,
+				9497A70E1DB9C8EE00EFBD87 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 		949F1FCB1D9BA8DB00C18C63 /* Demo10 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1013,6 +1057,7 @@
 		94AD3B151D98E39600CE87E3 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				9497A7011DB9C8EE00EFBD87 /* AFNetworking */,
 				94AD3B5A1D98E40A00CE87E3 /* 只有两列的时间选择器 */,
 			);
 			name = "第三方";
@@ -1317,20 +1362,25 @@
 				947A67371D7176BC008D09A5 /* UIView+Extension.m in Sources */,
 				94FC4E401DB4D1C800B8BCB5 /* DemoVC12.m in Sources */,
 				949F1FD51D9BA9E100C18C63 /* WYFlowLayout.m in Sources */,
+				9497A7121DB9C8EE00EFBD87 /* AFURLRequestSerialization.m in Sources */,
+				9497A7141DB9C8EE00EFBD87 /* AFURLSessionManager.m in Sources */,
 				940B717A1D755B7F0087E70A /* MBProgressHUD.m in Sources */,
 				940B71711D7538980087E70A /* DrawImageView.m in Sources */,
+				9497A7001DB9C82200EFBD87 /* WYNetTool.m in Sources */,
 				9425A3AA1D894B92009C8ED2 /* DemoVC8.m in Sources */,
 				940B71891D755C030087E70A /* WYTool_NSString.m in Sources */,
 				94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */,
 				94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */,
 				94AC49A91DAE6CA70061DBD9 /* WYAnnotationView.m in Sources */,
 				94289E371D82C22700A3258D /* WYDemoVC5.m in Sources */,
+				9497A70F1DB9C8EE00EFBD87 /* AFHTTPSessionManager.m in Sources */,
 				940261241DB8D1AB00BF032D /* UINavigationBar+Background.m in Sources */,
 				948E2E071DB480A000D94196 /* WYTool_CheckAuthority.m in Sources */,
 				94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */,
 				940B718D1D755C030087E70A /* WYHUD.m in Sources */,
 				940261181DB8CFF600BF032D /* TranslateTableViewController.m in Sources */,
 				94289E1E1D82BF5000A3258D /* UIButton+WYCategory.m in Sources */,
+				9497A7111DB9C8EE00EFBD87 /* AFSecurityPolicy.m in Sources */,
 				9425A3B01D895A12009C8ED2 /* WYAnnotation.m in Sources */,
 				940B718C1D755C030087E70A /* WYTool_Animation.m in Sources */,
 				948E131C1D7443AD001B2B12 /* ResponderViewController.m in Sources */,
@@ -1345,9 +1395,11 @@
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
 				9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */,
+				9497A7101DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.m in Sources */,
 				9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */,
 				94AD3B041D98D09400CE87E3 /* Demo9.m in Sources */,
 				94289E271D82C15600A3258D /* DemoVc4.m in Sources */,
+				9497A7131DB9C8EE00EFBD87 /* AFURLResponseSerialization.m in Sources */,
 				9402612F1DB8D38800BF032D /* Demo14.m in Sources */,
 				940B718A1D755C030087E70A /* WYTool_ShowMessage.m in Sources */,
 				947A66CC1D7175AB008D09A5 /* main.m in Sources */,
