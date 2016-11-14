@@ -23,6 +23,10 @@
 		940261211DB8D1A100BF032D /* DescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9402611F1DB8D1A100BF032D /* DescriptionView.xib */; };
 		940261241DB8D1AB00BF032D /* UINavigationBar+Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 940261231DB8D1AB00BF032D /* UINavigationBar+Background.m */; };
 		9402612F1DB8D38800BF032D /* Demo14.m in Sources */ = {isa = PBXBuildFile; fileRef = 9402612E1DB8D38800BF032D /* Demo14.m */; };
+		940657EC1DD9C06600294463 /* WYManagerNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940657E91DD9C06600294463 /* WYManagerNavController.m */; };
+		940657ED1DD9C06600294463 /* WYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940657EB1DD9C06600294463 /* WYNavBarView.m */; };
+		940657F21DD9C0D300294463 /* DemoVC15.m in Sources */ = {isa = PBXBuildFile; fileRef = 940657F11DD9C0D300294463 /* DemoVC15.m */; };
+		940657F51DD9C3C200294463 /* UIColor+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 940657F41DD9C3C200294463 /* UIColor+WYExtension.m */; };
 		940B71691D7519DB0087E70A /* ResponderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71681D7519DB0087E70A /* ResponderView.m */; };
 		940B71711D7538980087E70A /* DrawImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71701D7538980087E70A /* DrawImageView.m */; };
 		940B717A1D755B7F0087E70A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 940B71791D755B7F0087E70A /* MBProgressHUD.m */; };
@@ -102,7 +106,6 @@
 		94AD3B041D98D09400CE87E3 /* Demo9.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B021D98D09400CE87E3 /* Demo9.m */; };
 		94AD3B051D98D09400CE87E3 /* Demo9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94AD3B031D98D09400CE87E3 /* Demo9.xib */; };
 		94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B071D98D0A200CE87E3 /* WYProgressView.m */; };
-		94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */; };
 		94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */; };
 		94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */; };
 		94AD3B591D98E40600CE87E3 /* SRMonthPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3B581D98E40600CE87E3 /* SRMonthPicker.m */; };
@@ -169,6 +172,14 @@
 		940261231DB8D1AB00BF032D /* UINavigationBar+Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Background.m"; sourceTree = "<group>"; };
 		9402612D1DB8D38800BF032D /* Demo14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo14.h; sourceTree = "<group>"; };
 		9402612E1DB8D38800BF032D /* Demo14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo14.m; sourceTree = "<group>"; };
+		940657E81DD9C06600294463 /* WYManagerNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYManagerNavController.h; sourceTree = "<group>"; };
+		940657E91DD9C06600294463 /* WYManagerNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYManagerNavController.m; sourceTree = "<group>"; };
+		940657EA1DD9C06600294463 /* WYNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNavBarView.h; sourceTree = "<group>"; };
+		940657EB1DD9C06600294463 /* WYNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNavBarView.m; sourceTree = "<group>"; };
+		940657F01DD9C0D300294463 /* DemoVC15.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC15.h; sourceTree = "<group>"; };
+		940657F11DD9C0D300294463 /* DemoVC15.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC15.m; sourceTree = "<group>"; };
+		940657F31DD9C3C200294463 /* UIColor+WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WYExtension.h"; sourceTree = "<group>"; };
+		940657F41DD9C3C200294463 /* UIColor+WYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WYExtension.m"; sourceTree = "<group>"; };
 		940B71671D7519DB0087E70A /* ResponderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderView.h; sourceTree = "<group>"; };
 		940B71681D7519DB0087E70A /* ResponderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderView.m; sourceTree = "<group>"; };
 		940B716F1D7538980087E70A /* DrawImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawImageView.h; sourceTree = "<group>"; };
@@ -310,8 +321,6 @@
 		94AD3B031D98D09400CE87E3 /* Demo9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo9.xib; sourceTree = "<group>"; };
 		94AD3B061D98D0A200CE87E3 /* WYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYProgressView.h; sourceTree = "<group>"; };
 		94AD3B071D98D0A200CE87E3 /* WYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYProgressView.m; sourceTree = "<group>"; };
-		94AD3B091D98D39E00CE87E3 /* UIColor+tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+tool.h"; sourceTree = "<group>"; };
-		94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+tool.m"; sourceTree = "<group>"; };
 		94AD3B0C1D98D40300CE87E3 /* WYTool_Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTool_Date.h; sourceTree = "<group>"; };
 		94AD3B0D1D98D40300CE87E3 /* WYTool_Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTool_Date.m; sourceTree = "<group>"; };
 		94AD3B0F1D98D4AE00CE87E3 /* NSDate+WYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYExtension.h"; sourceTree = "<group>"; };
@@ -511,6 +520,43 @@
 				9402611F1DB8D1A100BF032D /* DescriptionView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		940657E61DD9C05E00294463 /* 自己写的工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				940657E71DD9C06600294463 /* WYManagerNavController */,
+			);
+			name = "自己写的工具类";
+			path = "WYProject/自己写的工具类";
+			sourceTree = "<group>";
+		};
+		940657E71DD9C06600294463 /* WYManagerNavController */ = {
+			isa = PBXGroup;
+			children = (
+				940657E81DD9C06600294463 /* WYManagerNavController.h */,
+				940657E91DD9C06600294463 /* WYManagerNavController.m */,
+				940657EA1DD9C06600294463 /* WYNavBarView.h */,
+				940657EB1DD9C06600294463 /* WYNavBarView.m */,
+			);
+			path = WYManagerNavController;
+			sourceTree = "<group>";
+		};
+		940657EE1DD9C09500294463 /* Demo15 */ = {
+			isa = PBXGroup;
+			children = (
+				940657EF1DD9C09500294463 /* VC */,
+			);
+			path = Demo15;
+			sourceTree = "<group>";
+		};
+		940657EF1DD9C09500294463 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				940657F01DD9C0D300294463 /* DemoVC15.h */,
+				940657F11DD9C0D300294463 /* DemoVC15.m */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		940B71721D7559220087E70A /* Framework */ = {
@@ -892,6 +938,7 @@
 		947A66BE1D7175AB008D09A5 = {
 			isa = PBXGroup;
 			children = (
+				940657E61DD9C05E00294463 /* 自己写的工具类 */,
 				94AD3B151D98E39600CE87E3 /* 第三方 */,
 				947A67341D7176AD008D09A5 /* Category */,
 				940B717B1D755BB40087E70A /* WYTool */,
@@ -918,6 +965,7 @@
 		947A66C91D7175AB008D09A5 /* WYProject */ = {
 			isa = PBXGroup;
 			children = (
+				940657EE1DD9C09500294463 /* Demo15 */,
 				940261191DB8D16900BF032D /* Demo14 */,
 				940260E11DB8C92300BF032D /* Demo13 */,
 				94FC4E3A1DB4D1B300B8BCB5 /* Demo12 */,
@@ -982,8 +1030,8 @@
 		947A67341D7176AD008D09A5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				94AD3B091D98D39E00CE87E3 /* UIColor+tool.h */,
-				94AD3B0A1D98D39E00CE87E3 /* UIColor+tool.m */,
+				940657F31DD9C3C200294463 /* UIColor+WYExtension.h */,
+				940657F41DD9C3C200294463 /* UIColor+WYExtension.m */,
 				94289E1C1D82BF5000A3258D /* UIButton+WYCategory.h */,
 				94289E1D1D82BF5000A3258D /* UIButton+WYCategory.m */,
 				947A67351D7176BC008D09A5 /* UIView+Extension.h */,
@@ -1351,14 +1399,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A4AA741DAA7BA4000B32DB /* WYFatherViewController.m in Sources */,
+				940657F21DD9C0D300294463 /* DemoVC15.m in Sources */,
 				947A66D21D7175AB008D09A5 /* ViewController.m in Sources */,
 				94289E221D82C04E00A3258D /* WYTextField.m in Sources */,
 				940261171DB8CFF600BF032D /* ReversalTableViewController.m in Sources */,
 				940260F21DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m in Sources */,
 				949F1FD91D9BABF500C18C63 /* DemoVC10.m in Sources */,
 				940B71881D755C030087E70A /* WYTool_Image.m in Sources */,
+				940657EC1DD9C06600294463 /* WYManagerNavController.m in Sources */,
 				940B718B1D755C030087E70A /* WYTool_RegularExpressions.m in Sources */,
 				947A66CF1D7175AB008D09A5 /* AppDelegate.m in Sources */,
+				940657ED1DD9C06600294463 /* WYNavBarView.m in Sources */,
 				947A67371D7176BC008D09A5 /* UIView+Extension.m in Sources */,
 				94FC4E401DB4D1C800B8BCB5 /* DemoVC12.m in Sources */,
 				949F1FD51D9BA9E100C18C63 /* WYFlowLayout.m in Sources */,
@@ -1372,6 +1423,7 @@
 				94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */,
 				94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */,
 				94AC49A91DAE6CA70061DBD9 /* WYAnnotationView.m in Sources */,
+				940657F51DD9C3C200294463 /* UIColor+WYExtension.m in Sources */,
 				94289E371D82C22700A3258D /* WYDemoVC5.m in Sources */,
 				9497A70F1DB9C8EE00EFBD87 /* AFHTTPSessionManager.m in Sources */,
 				940261241DB8D1AB00BF032D /* UINavigationBar+Background.m in Sources */,
@@ -1404,7 +1456,6 @@
 				940B718A1D755C030087E70A /* WYTool_ShowMessage.m in Sources */,
 				947A66CC1D7175AB008D09A5 /* main.m in Sources */,
 				9402610C1DB8CFBA00BF032D /* MXNavigationBarManager.m in Sources */,
-				94AD3B0B1D98D39E00CE87E3 /* UIColor+tool.m in Sources */,
 				94AD3B111D98D4AE00CE87E3 /* NSDate+WYExtension.m in Sources */,
 				940261041DB8CD5A00BF032D /* DemoVC13.m in Sources */,
 				94289E2D1D82C1B100A3258D /* DemoVc3ViewController.m in Sources */,

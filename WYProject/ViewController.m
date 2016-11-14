@@ -19,6 +19,7 @@
 #import "DemoVC11.h"
 #import "DemoVC12.h"
 #import "Demo14.h"
+#import "DemoVC15.h"
 @interface ViewController ()<UITableViewDataSource , UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic , strong) NSArray *dataArray;
@@ -44,7 +45,8 @@ static NSString *cellID = @"tableViewCell";
                            @{title:@"DemoVC11" , content:@"地图学习-- 画线",vc:@"DemoVC11"},
                            @{title:@"DemoVC12" , content:@"导航栏渐变效果  网上找的demo（1️⃣）",vc:@"DemoVC12"},
                            @{title:@"DemoVC13" , content:@"使用GSK实现tableView的header的动画",vc:@"DemoVC13"},
-                           @{title:@"Demo14" , content:@"导航渐变demo（二）",vc:@"Demo14"}
+                           @{title:@"Demo14" , content:@"导航渐变demo（二）",vc:@"Demo14"},
+                           @{title:@"DemoVC15" , content:@"导航栏头部标签",vc:@"DemoVC15"}
                            
                            
                            ];
