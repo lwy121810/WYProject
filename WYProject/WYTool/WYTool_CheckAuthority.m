@@ -27,14 +27,22 @@
             cancelTitle = @"知道了";
             otherButtonTitles = nil;
         }
+        
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_0
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:cancelTitle otherButtonTitles:otherButtonTitles, nil];
         [alertView show];
+#endif
         return NO;
     }else{
         return YES;
     }
 }
+
+
+
 #pragma mark - <UIAlertDelegate>
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_0
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1) {
         CGFloat kSystemMainVersion = [UIDevice currentDevice].systemVersion.floatValue;
@@ -46,5 +54,7 @@
         }
     }
 }
+
+#endif
 
 @end

@@ -33,10 +33,16 @@
 + (void)showMessage:(NSString *)message Class:(id)view;
 
 /**含有确定取消按钮提示框 含有确认按钮的点击事件*/
-+ (void)showMessage:(NSString *)message title:(NSString *)title Class:(id)view determineItemBlock:(void(^)())determineItemBlock;
++ (void)showMessage:(NSString *)message
+              title:(NSString *)title
+              Class:(id)view
+ determineItemBlock:(void(^)())determineItemBlock;
 
 /**只有一个确定按钮提示框 含有确认按钮的点击事件*/
-- (void)showMessage:(NSString *)message title:(NSString *)title Class:(id)view confirmItemBlock:(void(^)())confirmItemBlock;
+- (void)showMessage:(NSString *)message
+              title:(NSString *)title
+              Class:(id)view
+   confirmItemBlock:(void(^)())confirmItemBlock;
 
 - (void)dismissAlertVc;
 + (instancetype)shareShowMessage;
