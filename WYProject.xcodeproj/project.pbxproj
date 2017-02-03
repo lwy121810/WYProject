@@ -122,6 +122,9 @@
 		94FC4E411DB4D1C800B8BCB5 /* DemoVC12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */; };
 		E41B29251E35EEA1009CB7DC /* UIImage+WYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E41B29241E35EEA1009CB7DC /* UIImage+WYCategory.m */; };
 		E41B29271E35EFC0009CB7DC /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E41B29261E35EFC0009CB7DC /* 2.jpg */; };
+		E4FAD9751E44361B0092DE2A /* NSString+WYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9741E44361B0092DE2A /* NSString+WYKit.m */; };
+		E4FAD9781E4436900092DE2A /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9771E4436900092DE2A /* Encryption.m */; };
+		E4FAD97B1E44371E0092DE2A /* NSData+WYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD97A1E44371E0092DE2A /* NSData+WYKit.m */; };
 		E4FC2A1A1E31E0DE000E5077 /* WYTool_DeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FC2A191E31E0DE000E5077 /* WYTool_DeviceAuthorization.m */; };
 /* End PBXBuildFile section */
 
@@ -375,6 +378,12 @@
 		E41B29231E35EEA1009CB7DC /* UIImage+WYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYCategory.h"; sourceTree = "<group>"; };
 		E41B29241E35EEA1009CB7DC /* UIImage+WYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYCategory.m"; sourceTree = "<group>"; };
 		E41B29261E35EFC0009CB7DC /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		E4FAD9731E44361B0092DE2A /* NSString+WYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WYKit.h"; sourceTree = "<group>"; };
+		E4FAD9741E44361B0092DE2A /* NSString+WYKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYKit.m"; sourceTree = "<group>"; };
+		E4FAD9761E4436900092DE2A /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
+		E4FAD9771E4436900092DE2A /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
+		E4FAD9791E44371E0092DE2A /* NSData+WYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+WYKit.h"; sourceTree = "<group>"; };
+		E4FAD97A1E44371E0092DE2A /* NSData+WYKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYKit.m"; sourceTree = "<group>"; };
 		E4FC2A181E31E0DE000E5077 /* WYTool_DeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTool_DeviceAuthorization.h; sourceTree = "<group>"; };
 		E4FC2A191E31E0DE000E5077 /* WYTool_DeviceAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTool_DeviceAuthorization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1048,6 +1057,12 @@
 				94AD3B101D98D4AE00CE87E3 /* NSDate+WYExtension.m */,
 				E41B29231E35EEA1009CB7DC /* UIImage+WYCategory.h */,
 				E41B29241E35EEA1009CB7DC /* UIImage+WYCategory.m */,
+				E4FAD9791E44371E0092DE2A /* NSData+WYKit.h */,
+				E4FAD97A1E44371E0092DE2A /* NSData+WYKit.m */,
+				E4FAD9731E44361B0092DE2A /* NSString+WYKit.h */,
+				E4FAD9741E44361B0092DE2A /* NSString+WYKit.m */,
+				E4FAD9761E4436900092DE2A /* Encryption.h */,
+				E4FAD9771E4436900092DE2A /* Encryption.m */,
 			);
 			name = Category;
 			path = WYProject/Category;
@@ -1411,9 +1426,11 @@
 				94A4AA741DAA7BA4000B32DB /* WYFatherViewController.m in Sources */,
 				940657F21DD9C0D300294463 /* DemoVC15.m in Sources */,
 				947A66D21D7175AB008D09A5 /* ViewController.m in Sources */,
+				E4FAD9751E44361B0092DE2A /* NSString+WYKit.m in Sources */,
 				94289E221D82C04E00A3258D /* WYTextField.m in Sources */,
 				940261171DB8CFF600BF032D /* ReversalTableViewController.m in Sources */,
 				940260F21DB8C9D500BF032D /* UIScrollView+GSKStretchyHeaderView.m in Sources */,
+				E4FAD97B1E44371E0092DE2A /* NSData+WYKit.m in Sources */,
 				949F1FD91D9BABF500C18C63 /* DemoVC10.m in Sources */,
 				940B71881D755C030087E70A /* WYTool_Image.m in Sources */,
 				940657EC1DD9C06600294463 /* WYManagerNavController.m in Sources */,
@@ -1431,6 +1448,7 @@
 				9497A7001DB9C82200EFBD87 /* WYNetTool.m in Sources */,
 				9425A3AA1D894B92009C8ED2 /* DemoVC8.m in Sources */,
 				940B71891D755C030087E70A /* WYTool_NSString.m in Sources */,
+				E4FAD9781E4436900092DE2A /* Encryption.m in Sources */,
 				94289EB71D82C35D00A3258D /* DemoVC1.m in Sources */,
 				94AD3B081D98D0A200CE87E3 /* WYProgressView.m in Sources */,
 				94AC49A91DAE6CA70061DBD9 /* WYAnnotationView.m in Sources */,

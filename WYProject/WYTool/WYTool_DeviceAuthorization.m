@@ -37,9 +37,5 @@
     }
 }
 
-+ (void)alertWithTitle {
-    UIAlertController *alert = [[UIAlertController alloc] init];
-    
-}
 
 @end

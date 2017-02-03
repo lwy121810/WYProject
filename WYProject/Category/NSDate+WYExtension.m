@@ -11,7 +11,7 @@
 #define LogicReturn_Date @"ReturnDate"
 #define LogicReturn_DateComp @"ReturnDateComponents"
 
-#define TSC_TIME_ADD_ZEROMATCH(baseTime) ([baseTime length] > 1 ? baseTime : [NSString stringWithFormat:@"0%@", baseTime])
+#define WY_TIME_ADD_ZEROMATCH(baseTime) ([baseTime length] > 1 ? baseTime : [NSString stringWithFormat:@"0%@", baseTime])
 
 
 typedef enum {
@@ -21,72 +21,99 @@ typedef enum {
 @implementation NSDate (WYExtension)
 - (NSInteger)wy_year
 {
-    //    NSCalendar *calendar = [NSCalendar currentCalendar];
-    //    NSDateComponents *component = [calendar components:NSYearCalendarUnit fromDate:self];
-    //    return component.year;
+    
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *component = [calendar components:NSYearCalendarUnit fromDate:self];
+    return component.year;
+#else
+    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
     NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
     return dateComp.year;
+    
+#endif
+    
 }
 
 - (NSInteger)wy_month
 {
-    //    NSCalendar *calendar = [NSCalendar currentCalendar];
-    //    NSDateComponents *component = [calendar components:NSMonthCalendarUnit fromDate:self];
-    //    return component.month;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *component = [calendar components:NSMonthCalendarUnit fromDate:self];
+    return component.month;
+#else
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
     NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
     return dateComp.month;
-    
+#endif
 }
 
 - (NSInteger)wy_day
 {
-    //    NSCalendar *calendar = [NSCalendar currentCalendar];
-    //    NSDateComponents *component = [calendar components:NSDayCalendarUnit fromDate:self];
-    //    return component.day;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
     
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *component = [calendar components:NSDayCalendarUnit fromDate:self];
+    return component.day;
+#else
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
     NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
     return dateComp.day;
+#endif
     
 }
 
 - (NSInteger)wy_weekday
 {
-    //    NSCalendar *calendar = [NSCalendar currentCalendar];
-    //    NSDateComponents *component = [calendar components:NSWeekdayCalendarUnit fromDate:self];
-    //    return component.weekday;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *component = [calendar components:NSWeekdayCalendarUnit fromDate:self];
+    return component.weekday;
+#else
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
     NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
     return dateComp.weekday;
+#endif
+    
 }
 
 - (NSInteger)numberOfDaysInMonth
 {
+
     NSCalendar *c = [NSCalendar currentCalendar];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
+    NSRange days = [c rangeOfUnit:NSDayCalendarUnit
+                           inUnit:NSMonthCalendarUnit
+                          forDate:self];
+    return days.length;
+#else
+    
     NSRange dayss = [c rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
-    //    NSRange days = [c rangeOfUnit:NSDayCalendarUnit
-    //                           inUnit:NSMonthCalendarUnit
-    //                          forDate:self];
+    
     return dayss.length;
+#endif
 
 }
 
-#define TSCString_Format(...) [NSString stringWithFormat:__VA_ARGS__]
+#define WYString_Format(...) [NSString stringWithFormat:__VA_ARGS__]
 /**
  * 根据某年某月获得当月有多少天
  */
 - (int)getTotalDaysNumberOfYear:(int)year andMonth:(int)month
 {
     //传入的时间转成字符
-    NSString *dateString = TSCString_Format(@"%d-%d-%d", year, month, 1);
+    NSString *dateString = WYString_Format(@"%d-%d-%d", year, month, 1);
     //根据字符转成包含时间信息的字典
     NSDictionary* dateInfoDic = [self dateAndDateComponentsDictInfoWithDateFormatType:DateFormatType_YMD andTimeMatchStr:dateString];
     //获得时间
@@ -107,8 +134,8 @@ typedef enum {
         timeMatchStr = [[timeMatchStr componentsSeparatedByString:@" "] firstObject];
     }
     
-    NSDictionary * dateFormateDic = @{ TSCString_Format(@"%d", (int)DateFormatType_YMD) : @"yyyy-MM-dd",
-                         TSCString_Format(@"%d", (int)DateFormatType_YMDHMS) : @"yyyy-MM-dd HH:mm:ss" };
+    NSDictionary * dateFormateDic = @{ WYString_Format(@"%d", (int)DateFormatType_YMD) : @"yyyy-MM-dd",
+                         WYString_Format(@"%d", (int)DateFormatType_YMDHMS) : @"yyyy-MM-dd HH:mm:ss" };
     
     //获得时间格式
     NSString* dateFormateStr = [dateFormateDic objectForKey:[NSString stringWithFormat:@"%d", (int)dateFormate]];
@@ -155,23 +182,23 @@ typedef enum {
         NSArray* ymdCompoents = [ymdStr componentsSeparatedByString:@"-"];
         if (ymdCompoents.count == 3) {
             //TSC_TIME_ADD_ZEROMATCH 自动补齐字符长度
-            return TSCString_Format(@"%@-%@-%@ 00:00:00",
+            return WYString_Format(@"%@-%@-%@ 00:00:00",
                                     [ymdCompoents objectAtIndex:0],
-                                    TSC_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:1]),
-                                    TSC_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:2]));
+                                    WY_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:1]),
+                                    WY_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:2]));
         }
     }
     else if (allTimesCompoents.count == 2) {
         NSArray* ymdCompoents = [[allTimesCompoents firstObject] componentsSeparatedByString:@"-"];
         NSArray* hmsCompoents = [[allTimesCompoents objectAtIndex:1] componentsSeparatedByString:@":"];
         if (ymdCompoents.count == 3 && hmsCompoents.count == 3) {
-            return TSCString_Format(@"%@-%@-%@ %@:%@:%@",
+            return WYString_Format(@"%@-%@-%@ %@:%@:%@",
                                     [ymdCompoents objectAtIndex:0],
-                                    TSC_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:1]),
-                                    TSC_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:2]),
-                                    TSC_TIME_ADD_ZEROMATCH([hmsCompoents objectAtIndex:0]),
-                                    TSC_TIME_ADD_ZEROMATCH([hmsCompoents objectAtIndex:1]),
-                                    TSC_TIME_ADD_ZEROMATCH([hmsCompoents objectAtIndex:2]));
+                                    WY_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:1]),
+                                    WY_TIME_ADD_ZEROMATCH([ymdCompoents objectAtIndex:2]),
+                                    WY_TIME_ADD_ZEROMATCH([hmsCompoents objectAtIndex:0]),
+                                    WY_TIME_ADD_ZEROMATCH([hmsCompoents objectAtIndex:1]),
+                                    WY_TIME_ADD_ZEROMATCH([hmsCompoents objectAtIndex:2]));
         }
     }
     return baseTimeStr;
