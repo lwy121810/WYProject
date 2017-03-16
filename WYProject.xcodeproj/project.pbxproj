@@ -120,6 +120,7 @@
 		94FC4E391DB4CF2900B8BCB5 /* DemoVC11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E371DB4CF2900B8BCB5 /* DemoVC11.xib */; };
 		94FC4E401DB4D1C800B8BCB5 /* DemoVC12.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */; };
 		94FC4E411DB4D1C800B8BCB5 /* DemoVC12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */; };
+		C3FA6ADC1E7A562C00DE3026 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA6ADB1E7A562C00DE3026 /* CustomNavigationController.m */; };
 		E41B29251E35EEA1009CB7DC /* UIImage+WYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E41B29241E35EEA1009CB7DC /* UIImage+WYCategory.m */; };
 		E41B29271E35EFC0009CB7DC /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E41B29261E35EFC0009CB7DC /* 2.jpg */; };
 		E4FAD9751E44361B0092DE2A /* NSString+WYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FAD9741E44361B0092DE2A /* NSString+WYKit.m */; };
@@ -375,6 +376,8 @@
 		94FC4E3D1DB4D1C800B8BCB5 /* DemoVC12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC12.h; sourceTree = "<group>"; };
 		94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC12.m; sourceTree = "<group>"; };
 		94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC12.xib; sourceTree = "<group>"; };
+		C3FA6ADA1E7A562C00DE3026 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		C3FA6ADB1E7A562C00DE3026 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		E41B29231E35EEA1009CB7DC /* UIImage+WYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYCategory.h"; sourceTree = "<group>"; };
 		E41B29241E35EEA1009CB7DC /* UIImage+WYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYCategory.m"; sourceTree = "<group>"; };
 		E41B29261E35EFC0009CB7DC /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -1002,6 +1005,8 @@
 				947A66D11D7175AB008D09A5 /* ViewController.m */,
 				94A4AA721DAA7BA4000B32DB /* WYFatherViewController.h */,
 				94A4AA731DAA7BA4000B32DB /* WYFatherViewController.m */,
+				C3FA6ADA1E7A562C00DE3026 /* CustomNavigationController.h */,
+				C3FA6ADB1E7A562C00DE3026 /* CustomNavigationController.m */,
 				94289E7F1D82C35D00A3258D /* Demo1 */,
 				94289E2F1D82C22700A3258D /* Demo5 */,
 				94289E291D82C1B100A3258D /* Demo3 */,
@@ -1477,6 +1482,7 @@
 				94289E3C1D82C24600A3258D /* WYButton.m in Sources */,
 				94289E391D82C22700A3258D /* WYAreaChooseView.m in Sources */,
 				9425A39F1D893516009C8ED2 /* DemoVC7.m in Sources */,
+				C3FA6ADC1E7A562C00DE3026 /* CustomNavigationController.m in Sources */,
 				9497A7101DB9C8EE00EFBD87 /* AFNetworkReachabilityManager.m in Sources */,
 				9425A3971D88EB13009C8ED2 /* Demo6.m in Sources */,
 				94AD3B041D98D09400CE87E3 /* Demo9.m in Sources */,
