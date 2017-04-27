@@ -120,6 +120,8 @@
 		94FC4E391DB4CF2900B8BCB5 /* DemoVC11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E371DB4CF2900B8BCB5 /* DemoVC11.xib */; };
 		94FC4E401DB4D1C800B8BCB5 /* DemoVC12.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */; };
 		94FC4E411DB4D1C800B8BCB5 /* DemoVC12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */; };
+		C3B22C3E1E9F9E0C0067AB2D /* FKWalletAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B22C3C1E9F9E0C0067AB2D /* FKWalletAlertView.m */; };
+		C3B22C3F1E9F9E0C0067AB2D /* FKWalletAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B22C3D1E9F9E0C0067AB2D /* FKWalletAlertView.xib */; };
 		C3FA6ADC1E7A562C00DE3026 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA6ADB1E7A562C00DE3026 /* CustomNavigationController.m */; };
 		E41B29251E35EEA1009CB7DC /* UIImage+WYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E41B29241E35EEA1009CB7DC /* UIImage+WYCategory.m */; };
 		E41B29271E35EFC0009CB7DC /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E41B29261E35EFC0009CB7DC /* 2.jpg */; };
@@ -376,6 +378,9 @@
 		94FC4E3D1DB4D1C800B8BCB5 /* DemoVC12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC12.h; sourceTree = "<group>"; };
 		94FC4E3E1DB4D1C800B8BCB5 /* DemoVC12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC12.m; sourceTree = "<group>"; };
 		94FC4E3F1DB4D1C800B8BCB5 /* DemoVC12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC12.xib; sourceTree = "<group>"; };
+		C3B22C3B1E9F9E0C0067AB2D /* FKWalletAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKWalletAlertView.h; sourceTree = "<group>"; };
+		C3B22C3C1E9F9E0C0067AB2D /* FKWalletAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKWalletAlertView.m; sourceTree = "<group>"; };
+		C3B22C3D1E9F9E0C0067AB2D /* FKWalletAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKWalletAlertView.xib; sourceTree = "<group>"; };
 		C3FA6ADA1E7A562C00DE3026 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		C3FA6ADB1E7A562C00DE3026 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		E41B29231E35EEA1009CB7DC /* UIImage+WYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYCategory.h"; sourceTree = "<group>"; };
@@ -783,8 +788,7 @@
 				94289E2B1D82C1B100A3258D /* DemoVc3ViewController.m */,
 				94289E2C1D82C1B100A3258D /* DemoVc3ViewController.xib */,
 			);
-			name = Demo3;
-			path = ../../wyproject/WYProject/Demo3;
+			path = Demo3;
 			sourceTree = "<group>";
 		};
 		94289E2F1D82C22700A3258D /* Demo5 */ = {
@@ -995,9 +999,13 @@
 				9425A3A41D894B7B009C8ED2 /* Demo9 */,
 				9425A3991D8934F6009C8ED2 /* Demo7 */,
 				9425A3911D88EAAF009C8ED2 /* Demo6 */,
+				94289E2F1D82C22700A3258D /* Demo5 */,
+				94289E231D82C15600A3258D /* DemoVC4 */,
+				94289E291D82C1B100A3258D /* Demo3 */,
+				948E13191D744364001B2B12 /* Demo2 */,
+				94289E7F1D82C35D00A3258D /* Demo1 */,
 				94289E1F1D82BF7800A3258D /* 自定义控件 */,
 				940B71731D755AE40087E70A /* lib */,
-				948E13191D744364001B2B12 /* Demo2 */,
 				94ED6F851D741E2800E6B462 /* 环信及时通讯 未做 */,
 				947A66CD1D7175AB008D09A5 /* AppDelegate.h */,
 				947A66CE1D7175AB008D09A5 /* AppDelegate.m */,
@@ -1007,10 +1015,6 @@
 				94A4AA731DAA7BA4000B32DB /* WYFatherViewController.m */,
 				C3FA6ADA1E7A562C00DE3026 /* CustomNavigationController.h */,
 				C3FA6ADB1E7A562C00DE3026 /* CustomNavigationController.m */,
-				94289E7F1D82C35D00A3258D /* Demo1 */,
-				94289E2F1D82C22700A3258D /* Demo5 */,
-				94289E291D82C1B100A3258D /* Demo3 */,
-				94289E231D82C15600A3258D /* DemoVC4 */,
 				947A67331D717663008D09A5 /* PrefixHeader.pch */,
 				947A66D31D7175AB008D09A5 /* Main.storyboard */,
 				947A66D61D7175AB008D09A5 /* Assets.xcassets */,
@@ -1135,6 +1139,9 @@
 		94AD3B151D98E39600CE87E3 /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				C3B22C3B1E9F9E0C0067AB2D /* FKWalletAlertView.h */,
+				C3B22C3C1E9F9E0C0067AB2D /* FKWalletAlertView.m */,
+				C3B22C3D1E9F9E0C0067AB2D /* FKWalletAlertView.xib */,
 				9497A7011DB9C8EE00EFBD87 /* AFNetworking */,
 				94AD3B5A1D98E40A00CE87E3 /* 只有两列的时间选择器 */,
 			);
@@ -1342,6 +1349,7 @@
 				TargetAttributes = {
 					947A66C61D7175AB008D09A5 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 6PKRU8JWQ6;
 					};
 					947A66DF1D7175AB008D09A5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1389,6 +1397,7 @@
 				9425A3A01D893516009C8ED2 /* DemoVC7.xib in Resources */,
 				94289EB51D82C35D00A3258D /* ShareSDK.bundle in Resources */,
 				94289EAB1D82C35D00A3258D /* ShareSDKUI.bundle in Resources */,
+				C3B22C3F1E9F9E0C0067AB2D /* FKWalletAlertView.xib in Resources */,
 				94289EBE1D82F85700A3258D /* 粒子动画.gif in Resources */,
 				E41B29271E35EFC0009CB7DC /* 2.jpg in Resources */,
 				94289EB21D82C35D00A3258D /* read_me.txt in Resources */,
@@ -1463,6 +1472,7 @@
 				9497A70F1DB9C8EE00EFBD87 /* AFHTTPSessionManager.m in Sources */,
 				940261241DB8D1AB00BF032D /* UINavigationBar+Background.m in Sources */,
 				948E2E071DB480A000D94196 /* WYTool_CheckAuthority.m in Sources */,
+				C3B22C3E1E9F9E0C0067AB2D /* FKWalletAlertView.m in Sources */,
 				94AD3B0E1D98D40300CE87E3 /* WYTool_Date.m in Sources */,
 				940B718D1D755C030087E70A /* WYHUD.m in Sources */,
 				940261181DB8CFF600BF032D /* TranslateTableViewController.m in Sources */,
@@ -1636,6 +1646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6PKRU8JWQ6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1665,6 +1676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6PKRU8JWQ6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

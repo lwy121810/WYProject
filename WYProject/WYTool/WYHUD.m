@@ -29,6 +29,7 @@
     hud.label.text = title;
     hud.removeFromSuperViewOnHide = YES;
     [hud hideAnimated:YES afterDelay:1.0];
+    
 }
 - (void)hiddenHUDForView:(UIView *)view
 {

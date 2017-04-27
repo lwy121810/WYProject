@@ -285,13 +285,14 @@
     CAShapeLayer *pulseLayer = [CAShapeLayer layer];
     pulseLayer.frame = testView.bounds;
     pulseLayer.path = [UIBezierPath bezierPathWithOvalInRect:testView.bounds].CGPath;
-    pulseLayer.fillColor = [UIColor redColor].CGColor;
+    //颜色
+    pulseLayer.fillColor = [UIColor blueColor].CGColor;
     pulseLayer.opacity = 0.0;
     
     CAReplicatorLayer *replocatorLayer = [CAReplicatorLayer layer];
     replocatorLayer.frame = testView.bounds;
     //创建读本的个数 包括原来的
-    replocatorLayer.instanceCount = 4;
+    replocatorLayer.instanceCount = 2;
     //设置每个副本创建的延时
     replocatorLayer.instanceDelay = 1;
     
@@ -307,6 +308,7 @@
     CABasicAnimation *scaleAnima = [CABasicAnimation animationWithKeyPath:@"transform"];
     scaleAnima.fromValue = [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 0.0, 0.0, 0.0)];
     scaleAnima.toValue = [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 1.0, 1.0, 0.0)];
+    
     
     CAAnimationGroup *groupAnima = [CAAnimationGroup animation];
     groupAnima.animations = @[opacityAnima, scaleAnima];
