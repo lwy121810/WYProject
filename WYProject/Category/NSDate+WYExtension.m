@@ -19,26 +19,34 @@ typedef enum {
     DateFormatType_YMDHMS//年月日，时分秒
 }DateFormatType;
 @implementation NSDate (WYExtension)
+/**
+ 日期所在的年份
+ 
+ @return 年份 如返回2018 表示当前为2018年
+ */
 - (NSInteger)wy_year
 {
-    
-    
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
-    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *component = [calendar components:NSYearCalendarUnit fromDate:self];
     return component.year;
 #else
-    
+    NSDateComponents* dateComp = [self getDateComponents];
+    return dateComp.year;
+#endif
+}
+- (NSDateComponents *)getDateComponents
+{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
-    NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
-    return dateComp.year;
-    
-#endif
-    
+    NSDateComponents *dateComp = [calendar components:unitFlags fromDate:self];
+    return dateComp;
 }
-
+/**
+ 日期所在的月份
+ 
+ @return 月份 如返回2 表示当前是二月份
+ */
 - (NSInteger)wy_month
 {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
@@ -47,50 +55,69 @@ typedef enum {
     NSDateComponents *component = [calendar components:NSMonthCalendarUnit fromDate:self];
     return component.month;
 #else
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
-    NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
+    NSDateComponents* dateComp = [self getDateComponents];
     return dateComp.month;
 #endif
 }
 
+/**
+ date日期所在的月份的第几天（如5:表示为所在月份的5号）
+ 
+ @return return value description
+ */
 - (NSInteger)wy_day
 {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
-    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *component = [calendar components:NSDayCalendarUnit fromDate:self];
     return component.day;
 #else
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
-    NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
+    NSDateComponents* dateComp = [self getDateComponents];
     return dateComp.day;
 #endif
-    
 }
 
+
+/**
+ date是所在星期的第几天 （如5，就是周六（从周日开始））
+ 
+ @return return value description
+ */
 - (NSInteger)wy_weekday
 {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
-    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *component = [calendar components:NSWeekdayCalendarUnit fromDate:self];
     return component.weekday;
 #else
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags =  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
-    NSDateComponents* dateComp = [calendar components:unitFlags fromDate:self];
+    NSDateComponents* dateComp = [self getDateComponents];
     return dateComp.weekday;
 #endif
-    
 }
 
+/**
+ 日期所在星期是日期所在年份的第几个星期
+ 
+ @return 如返回5 表示日期所在星期是该年份的第五周
+ */
+- (NSInteger)wy_weekOfYear
+{
+    NSDateComponents* dateComp = [self getDateComponents];
+    return dateComp.weekOfYear;
+}
+
+/**
+ 日期所在星期是该日期所在月份的第几周
+
+ @return 如返回2 表示该日期是该月份的第二周
+ */
+- (NSInteger)wy_weekOfMonth
+{
+    NSDateComponents* dateComp = [self getDateComponents];
+    return dateComp.weekOfMonth;
+}
 - (NSInteger)numberOfDaysInMonth
 {
-
     NSCalendar *c = [NSCalendar currentCalendar];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_8_0
     NSRange days = [c rangeOfUnit:NSDayCalendarUnit
@@ -99,11 +126,50 @@ typedef enum {
     return days.length;
 #else
     
-    NSRange dayss = [c rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
+    NSRange days = [c rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
     
-    return dayss.length;
+    return days.length;
 #endif
+}
 
+/**
+ 是否跟另一日期在同一星期内
+
+ @param otherDate 另一日期
+ @return YES: 在同一个星期内 NO:不在同一周内
+ */
+- (BOOL)wy_sameWeekWithOtherDate:(NSDate *)otherDate
+{
+    NSInteger year = [self wy_year];
+    NSInteger otherYear = [otherDate wy_year];
+    if (year != otherYear) {
+        return NO;
+    }
+    NSInteger weekOfYear = [self wy_weekOfYear];
+    NSInteger otherWeekOfYear = [otherDate wy_weekOfYear];
+    
+    return weekOfYear == otherWeekOfYear;
+}
+
+/**
+ 是否是今天
+
+ @return YES:该日期是今天 NO:该日期不是今天
+ */
+- (BOOL)wy_isToday
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    
+    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:self];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    if([today isEqualToDate:otherDate])
+    {
+        return YES;
+    }
+    return NO;
 }
 
 #define WYString_Format(...) [NSString stringWithFormat:__VA_ARGS__]
@@ -209,7 +275,9 @@ typedef enum {
     formatter.dateFormat = format;
     return [formatter stringFromDate:self];
 }
-
+/**
+ *  返回几个月之后的时间
+ */
 - (NSDate *)wy_dateByAddingMonths:(NSInteger)months
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -217,11 +285,16 @@ typedef enum {
     [components setMonth:months];
     return [calendar dateByAddingComponents:components toDate:self options:0];
 }
-
+/**
+ *  返回几个月之前的时间
+ */
 - (NSDate *)wy_dateBySubtractingMonths:(NSInteger)months
 {
     return [self wy_dateByAddingMonths:-months];
 }
+/**
+ *  返回几天之后的时间
+ */
 - (NSDate *)wy_dateByAddingDays:(NSInteger)days
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -229,8 +302,9 @@ typedef enum {
     [components setDay:days];
     return [calendar dateByAddingComponents:components toDate:self options:0];
 }
+
 /**
- *  返回几天之后的时间
+ *  返回几天之前的时间
  */
 - (NSDate *)wy_dateBySubtractingDays:(NSInteger)days
 {
