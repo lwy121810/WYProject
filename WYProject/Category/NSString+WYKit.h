@@ -305,4 +305,17 @@
  *  @return 返回对APNS可用的UUID(No "<>" or "-" or spaces)
  */
 - (NSString * _Nonnull)convertToAPNSUUID;
+
+
+- (BOOL)isEmoji;
+
+- (BOOL)isContainsEmoji;
+
+
+/**
+ 截取URL中的参数
+ 
+ @return parameters
+ */
+- (NSDictionary *)getURLParameters ;
 @end

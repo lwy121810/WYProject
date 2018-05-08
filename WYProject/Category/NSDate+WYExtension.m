@@ -158,44 +158,65 @@ typedef enum {
  */
 - (BOOL)wy_isToday
 {
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:[NSDate date]];
-    NSDate *today = [cal dateFromComponents:components];
-    
-    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:self];
-    NSDate *otherDate = [cal dateFromComponents:components];
-    
-    if([today isEqualToDate:otherDate])
-    {
-        return YES;
-    }
-    return NO;
+//    NSCalendar *cal = [NSCalendar currentCalendar];
+//    NSDateComponents *components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:[NSDate date]];
+//    NSDate *today = [cal dateFromComponents:components];
+//
+//    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:self];
+//    NSDate *otherDate = [cal dateFromComponents:components];
+//
+//
+//    if([today isEqualToDate:otherDate])
+//    {
+//        return YES;
+//    }
+    return [[NSCalendar currentCalendar] isDateInToday:self];
 }
+
+- (BOOL)wy_isTomorrow
+{
+    return [[NSCalendar currentCalendar] isDateInTomorrow:self];
+}
+- (BOOL)wy_isYesterday
+{
+    return [[NSCalendar currentCalendar] isDateInYesterday:self];
+}
+- (BOOL)wy_isWeekend
+{
+    return [[NSCalendar currentCalendar] isDateInWeekend:self];
+}
+
+- (BOOL)wy_isSameDayWithOtherDate:(NSDate *)otherDate
+{
+    return [[NSCalendar currentCalendar] isDate:self inSameDayAsDate:otherDate];
+}
+
 
 #define WYString_Format(...) [NSString stringWithFormat:__VA_ARGS__]
 /**
  * 根据某年某月获得当月有多少天
  */
-- (int)getTotalDaysNumberOfYear:(int)year andMonth:(int)month
+
++ (NSUInteger)wy_numberOfDaysInYear:(NSUInteger)year andMonth:(NSUInteger)month
 {
-    //传入的时间转成字符
-    NSString *dateString = WYString_Format(@"%d-%d-%d", year, month, 1);
-    //根据字符转成包含时间信息的字典
-    NSDictionary* dateInfoDic = [self dateAndDateComponentsDictInfoWithDateFormatType:DateFormatType_YMD andTimeMatchStr:dateString];
-    //获得时间
-    NSDate* date = [dateInfoDic objectForKey:LogicReturn_Date];
+    NSDate* nowDate = [NSDate wy_dateWithYear:year month:month day:1];;
+    NSTimeZone* zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate:nowDate];
+    nowDate = [nowDate dateByAddingTimeInterval:interval];
     NSCalendar* c = [NSCalendar currentCalendar];
     //获得总天数
-    NSRange days = [c rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date];
-    return (int)days.length;
+    NSRange days = [c rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:nowDate];
+    return days.length;
+
 }
+
 /**
  *  根据传入的字符串获得NSDate和NSDateComponents  字符串格式为yyyy-MM-dd格式 或者yyyy-MM-dd HH... @{ LogicReturn_Date : nowDate,
  LogicReturn_DateComp : dateComp }
  */
-- (NSDictionary*)dateAndDateComponentsDictInfoWithDateFormatType:(DateFormatType)dateFormate andTimeMatchStr:(NSString*)timeMatchStr
++ (NSDictionary*)dateAndDateComponentsDictInfoWithDateFormatType:(DateFormatType)dateFormate andTimeMatchStr:(NSString*)timeMatchStr
 {
-    timeMatchStr = [self timeMatchedString4Base:timeMatchStr];
+    timeMatchStr = [self wy_timeMatchedString4Base:timeMatchStr];
     if (dateFormate == DateFormatType_YMD) {
         timeMatchStr = [[timeMatchStr componentsSeparatedByString:@" "] firstObject];
     }
@@ -216,7 +237,7 @@ typedef enum {
     NSInteger interval = [zone secondsFromGMTForDate:nowDate];
     nowDate = [nowDate dateByAddingTimeInterval:interval];
     //Date转换DateComps
-    NSDateComponents* dateComp = [self dateComponentChangedByDate:nowDate dateFormatType:dateFormate];
+    NSDateComponents* dateComp = [self wy_componentsFromDate:nowDate dateFormatType:dateFormate];
     //    NSLog(@"date==%@\ndateComp==%@", nowDate, dateComp);
     return @{LogicReturn_Date : nowDate,
              LogicReturn_DateComp : dateComp };
@@ -226,21 +247,21 @@ typedef enum {
 /**
  *  NSDate转NSDateComponents
  */
-- (NSDateComponents *)dateComponentChangedByDate:(NSDate *)baseDate dateFormatType:(DateFormatType)formatType
++ (NSDateComponents *)wy_componentsFromDate:(NSDate *)fromDate dateFormatType:(DateFormatType)formatType
 {
     NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
     if ((int)formatType == DateFormatType_YMDHMS) {
         unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear | NSCalendarUnitTimeZone;
     }
-    NSDateComponents* dateComp = [calendar components:unitFlags fromDate:baseDate];
+    NSDateComponents* dateComp = [calendar components:unitFlags fromDate:fromDate];
     return dateComp;
 }
 
 /**
  *  根据传入的时间字符转化为 YY-MM-DD hh:mm:ss标准格式（个位数的补成双位数）
  */
-- (NSString*)timeMatchedString4Base:(NSString*)baseTimeStr
++ (NSString*)wy_timeMatchedString4Base:(NSString*)baseTimeStr
 {
     NSArray* allTimesCompoents = [baseTimeStr componentsSeparatedByString:@" "];
     if (allTimesCompoents.count == 1) {
@@ -269,6 +290,12 @@ typedef enum {
     }
     return baseTimeStr;
 }
+/**
+ 转成字符串
+ 
+ @param format 格式
+ @return 字符串
+ */
 - (NSString *)wy_stringWithFormat:(NSString *)format
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -311,6 +338,58 @@ typedef enum {
     return [self wy_dateByAddingDays:-days];
 }
 
+/**
+ 与其他日期的间隔天数
+ 
+ aDate      :   2018.5.7
+ otherDate  :   2018.5.9
+ NSInteger result = [aDate wy_differenceDaysWithOtherDate:otherDate];
+ > result == 1  表明otherDate与aDate间隔了一天 （而不是 (9-7) = 2天， 因为中间只隔了2018.5.8这一天）
+ 相反的 [otherDate wy_differenceDaysWithOtherDate:aDate]
+ > result == -1 表明 aDate 与 otherDate间隔了-1 天 因为aDate比otherDate小 所以返回了负数
+ 
+ @param otherDate 其他日期
+ @return 间隔天数
+ */
+- (NSInteger)wy_differenceDaysWithOtherDate:(NSDate *)otherDate
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitDay;
+    NSCalendarOptions options = NSCalendarWrapComponents;
+    
+    NSDateComponents *components = [calendar components:unit fromDate:self toDate:otherDate options:options];
+    
+    
+    // 该方法也可以
+//    NSCalendarUnit unit = NSCalendarUnitDay;
+//    NSTimeInterval interval = 0;
+//    BOOL result = [[NSCalendar currentCalendar] rangeOfUnit:unit startDate:&now interval:&interval forDate:date];
+//    NSInteger day = interval / (24 * 60 * 60);
+    
+    return components.day;
+}
+
+- (NSArray <NSDate *>*)betweenDaysWithOtherDate:(NSDate *)otherDate
+{
+    NSMutableArray *dates = @[].mutableCopy;
+    
+    NSDate *earlierDate = [self earlierDate:otherDate];
+    NSDate *laterDate = [self laterDate:otherDate];
+    
+    NSInteger days = [earlierDate wy_differenceDaysWithOtherDate:laterDate];
+    
+    while (days > 0) {
+        NSDate *date = [earlierDate wy_dateByAddingDays:1];
+        [dates addObject:date];
+        days--;
+    }
+//    for (NSInteger i = 0; i < days; i++) {
+//        NSDate *date = [earlierDate wy_dateByAddingDays:1];
+//        [dates addObject:date];
+//    }
+    return dates.copy;
+}
+
 + (instancetype)wy_dateFromString:(NSString *)string format:(NSString *)format
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -326,5 +405,12 @@ typedef enum {
     components.month = month;
     components.day = day;
     return [calendar dateFromComponents:components];
+}
+
+/// 转为时间戳字符串
+- (NSString *)wy_toTimestamp
+{
+    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[self timeIntervalSince1970]];
+    return timeSp;
 }
 @end

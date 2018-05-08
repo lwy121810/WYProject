@@ -410,4 +410,162 @@
 }
 
 
+- (BOOL)isEmoji{
+    const unichar high = [self characterAtIndex:0];
+    
+    // Surrogate pair (U+1D000-1F77F)
+    if (0xd800 <= high && high <= 0xdbff && self.length >= 2) {
+        const unichar low = [self characterAtIndex:1];
+        const int codepoint = ((high - 0xd800) * 0x400) + (low - 0xdc00) + 0x10000;
+        
+        return (0x1d000 <= codepoint && codepoint <= 0x1f77f);
+        
+        // Not surrogate pair (U+2100-27BF)
+    } else {
+        return (0x2100 <= high && high <= 0x27bf);
+    }
+}
+
+- (BOOL)isContainsEmoji
+{
+    __block BOOL returnValue = NO;
+    
+    [self enumerateSubstringsInRange:NSMakeRange(0, [self length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+        const unichar hs = [substring characterAtIndex:0];
+        if (0xd800 <= hs && hs <= 0xdbff)
+        {
+            if (substring.length > 1)
+            {
+                const unichar ls = [substring characterAtIndex:1];
+                const int uc = ((hs - 0xd800) * 0x400) + (ls - 0xdc00) + 0x10000;
+                if (0x1d000 <= uc && uc <= 0x1f77f)
+                {
+                    returnValue = YES;
+                }
+            }
+        }
+        else if (substring.length > 1)
+        {
+            const unichar ls = [substring characterAtIndex:1];
+            if (ls == 0x20e3)
+            {
+                returnValue = YES;
+            }
+        }
+        else
+        {
+            if (0x2100 <= hs && hs <= 0x27ff)
+            {
+                returnValue = YES;
+            }
+            else if (0x2B05 <= hs && hs <= 0x2b07)
+            {
+                returnValue = YES;
+            }
+            else if (0x2934 <= hs && hs <= 0x2935)
+            {
+                returnValue = YES;
+            }
+            else if (0x3297 <= hs && hs <= 0x3299)
+            {
+                returnValue = YES;
+            }
+            else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50)
+            {
+                returnValue = YES;
+            }
+        }
+        
+        *stop = returnValue;
+    }];
+    
+    return returnValue;
+}
+/**
+ 截取URL中的参数
+ 
+ @return parameters
+ */
+- (NSDictionary *)getURLParameters {
+    
+    // 查找参数
+    NSRange range = [self rangeOfString:@"?"];
+    if (range.location == NSNotFound) {
+        return nil;
+    }
+    
+    // 以字典形式将参数返回
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    // 截取参数
+    NSString *parametersString = [self substringFromIndex:range.location + 1];
+    
+    // 判断参数是单个参数还是多个参数
+    if ([parametersString containsString:@"&"]) {
+        
+        // 多个参数，分割参数
+        NSArray *urlComponents = [parametersString componentsSeparatedByString:@"&"];
+        
+        for (NSString *keyValuePair in urlComponents) {
+            // 生成Key/Value
+            NSArray *pairComponents = [keyValuePair componentsSeparatedByString:@"="];
+            NSString *key = [pairComponents.firstObject stringByRemovingPercentEncoding];
+            NSString *value = [pairComponents.lastObject stringByRemovingPercentEncoding];
+            
+            // Key不能为nil
+            if (key == nil || value == nil) {
+                continue;
+            }
+            
+            id existValue = [params valueForKey:key];
+            
+            if (existValue != nil) {
+                
+                // 已存在的值，生成数组
+                if ([existValue isKindOfClass:[NSArray class]]) {
+                    // 已存在的值生成数组
+                    NSMutableArray *items = [NSMutableArray arrayWithArray:existValue];
+                    [items addObject:value];
+                    
+                    [params setValue:items forKey:key];
+                } else {
+                    
+                    // 非数组
+                    [params setValue:@[existValue, value] forKey:key];
+                }
+                
+            } else {
+                
+                // 设置值
+                [params setValue:value forKey:key];
+            }
+        }
+    } else {
+        // 单个参数
+        
+        // 生成Key/Value
+        NSArray *pairComponents = [parametersString componentsSeparatedByString:@"="];
+        
+        // 只有一个参数，没有值
+        if (pairComponents.count == 1) {
+            return nil;
+        }
+        
+        // 分隔值
+        NSString *key = [pairComponents.firstObject stringByRemovingPercentEncoding];
+        NSString *value = [pairComponents.lastObject stringByRemovingPercentEncoding];
+        
+        // Key不能为nil
+        if (key == nil || value == nil) {
+            return nil;
+        }
+        
+        // 设置值
+        [params setValue:value forKey:key];
+    }
+    
+    return params.copy;
+}
+
+
 @end

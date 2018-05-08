@@ -20,6 +20,9 @@
 #import "DemoVC12.h"
 #import "Demo14.h"
 #import "Demo15.h"
+#import "NSDate+WYExtension.h"
+#import "User.h"
+
 @interface ViewController ()<UITableViewDataSource , UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic , strong) NSArray *dataArray;
@@ -69,6 +72,13 @@ static NSString *cellID = @"tableViewCell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 80;
+    
+    User *user = [[User alloc] initWithUserBuilder:^(UserBuilder *builder) {
+        builder.name = @"lwy";
+        builder.age = 90;
+    }];
+    
+    NSLog(@"name: %@, age: %ld", user.name, user.age);
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -97,17 +107,23 @@ static NSString *cellID = @"tableViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSString *vcKey = @"vc";
-    NSString *title = @"title";
-
-    NSDictionary *infoDict = self.dataArray[indexPath.row];
+    NSDate *date = [NSDate wy_dateWithYear:2018 month:5 day:10];
+    NSDate *now = [NSDate date];
     
-    NSString *vcName = infoDict[vcKey];
+    NSArray *dates = [now betweenDaysWithOtherDate:date];
     
-    Class targetClass = NSClassFromString(vcName);
-    UIViewController * targetVc = [[targetClass alloc] init];
-    targetVc.title = [infoDict valueForKey:title];
-    [self.navigationController pushViewController:targetVc animated:YES];
+    NSLog(@"%@",dates);
+//    NSString *vcKey = @"vc";
+//    NSString *title = @"title";
+//
+//    NSDictionary *infoDict = self.dataArray[indexPath.row];
+//
+//    NSString *vcName = infoDict[vcKey];
+//
+//    Class targetClass = NSClassFromString(vcName);
+//    UIViewController * targetVc = [[targetClass alloc] init];
+//    targetVc.title = [infoDict valueForKey:title];
+//    [self.navigationController pushViewController:targetVc animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
